@@ -1,0 +1,64 @@
+/* =========================================================
+base - 基本設定
+========================================================= */
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  line-height: 1.5;
+}
+
+body {
+  font-family: $font-family-primary;
+  color: $base-font-color;
+  font-weight: 500;
+  font-size: 1.9rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  // @include link-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: $sub-font-color;
+  }
+}
+
+.l-wrapper {
+  border: 30px solid transparent;
+  border-image: url(../../static/assets/images/bg-header.jpg);
+  height: 100vh;
+}
+
+@include mq(lg, max) {
+  img {
+    max-width: 100%;
+  }
+  html {
+    font-size: 45%;
+  }
+  h1,
+  h2,
+  h3,
+  h4 h5,
+  h6 {
+    line-height: 1.2;
+  }
+}
+
+@include mq(lg, min) {
+  .sp-only {
+    display: none;
+  }
+}
+
+@include mq(lg, max) {
+  .pc-only {
+    display: none;
+  }
+}
