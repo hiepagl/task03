@@ -19,20 +19,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 a {
   // @include link-color;
+  display: block;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
     color: $sub-font-color;
   }
-}
-
-.l-wrapper {
-  border: 30px solid transparent;
-  border-image: url(../../static/assets/images/bg-header.jpg);
-  height: 100vh;
 }
 
 @include mq(lg, max) {

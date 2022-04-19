@@ -1,0 +1,80 @@
+.p-hero {
+  padding-top: 100px;
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  &__wrapper {
+    background-image: url(../images/bg_main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+  }
+
+  &__content {
+    width: 50%;
+    text-align: center;
+    padding-top: 93px;
+    padding-left: 50px;
+
+    & > figure {
+      margin-bottom: 14px;
+    }
+
+    & > h4 {
+      font-size: 1.6rem;
+      font-family: "Sawarabi Mincho";
+      color: #000;
+      line-height: 4;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 60px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & > a {
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 306px;
+      height: 55px;
+      background-color: #25a989;
+      border-radius: 27.5px;
+      margin-top: 25px;
+      & > p {
+        font-size: 24px;
+        font-family: "Sawarabi Mincho";
+        color: rgb(255, 255, 255);
+        line-height: 55px;
+      }
+    }
+  }
+
+  &__info {
+    & > span {
+      font-size: 1.6rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      color: #000;
+    }
+
+    & > p {
+      font-size: 3rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      color: #000;
+    }
+  }
+}

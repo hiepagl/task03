@@ -1,0 +1,147 @@
+.p-point {
+  background-image: url(../images/bgPoint.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 2276px;
+
+  &__container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  &__wrapper {
+    padding-top: 100px;
+  }
+
+  &__content {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 10px;
+  }
+
+  &__heading {
+    max-width: 810px;
+    margin: auto;
+    padding: 0 10px;
+    display: flex;
+  }
+
+  &__number {
+    margin-right: 28px;
+
+    & > figure {
+      position: relative;
+      width: fit-content;
+      &::after {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__number > p {
+    font-size: 2.2rem;
+    font-family: "Sawarabi Mincho";
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.182;
+    margin-top: 35px;
+  }
+
+  &__title {
+    & > h2 {
+      font-size: 3.6rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      color: #176b6a;
+      line-height: 1;
+      margin-top: 3px;
+      margin-bottom: 27px;
+    }
+
+    & > p {
+      font-size: 1.4rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      color: rgb(0, 0, 0);
+      line-height: 1.857;
+    }
+  }
+
+  &__list {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  &__wrapItem {
+    width: 33.33%;
+    padding: 10px;
+  }
+
+  &__Item {
+    padding-top: 100%;
+    background-image: url(../images/point/list1-item1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    border-radius: 26px;
+    text-align: center;
+    padding: 50px 45px 0 45px;
+    & > h3 {
+      font-size: 2.4rem;
+      font-family: "Sawarabi Mincho";
+      color: #176b6a;
+      line-height: 1.083;
+      position: relative;
+      margin-bottom: 40px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 1px;
+        background-color: #176b6a;
+      }
+    }
+
+    & > p {
+      font-size: 1.2rem;
+      font-family: "Sawarabi Mincho";
+      color: #000000;
+      line-height: 1.75;
+      text-align: left;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    font-family: "Sawarabi Mincho";
+    color: #ffffff;
+    line-height: 1.625;
+  }
+}

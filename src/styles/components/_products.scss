@@ -1,0 +1,153 @@
+.p-products {
+  padding-top: 100px;
+  height: 688px;
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    & > h3 {
+      font-size: 2rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      color: #000;
+      //   line-height: 50px;
+      text-align: center;
+    }
+    & > h2 {
+      font-size: 4.6rem;
+      font-family: "Sawarabi Mincho";
+      font-weight: 400;
+      line-height: 50px;
+      color: #000;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__list1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -20px;
+  }
+
+  &__list2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__list1 &__wrapItem {
+    padding: 20px;
+  }
+  &__list1 &__Item1 {
+    position: relative;
+    margin-top: 52px;
+    width: 172px;
+  }
+  &__list2 &__Item1 {
+    position: relative;
+    margin-top: 90px;
+    width: 224px;
+  }
+  &__list1 &__Item2 {
+    position: relative;
+    margin-top: 93px;
+    width: 226px;
+  }
+  &__list2 &__Item2 {
+    position: relative;
+    margin-top: 145px;
+    width: 237px;
+  }
+  &__list1 &__Item3 {
+    position: relative;
+    margin-top: 93px;
+    width: 286px;
+  }
+  &__list2 &__Item3 {
+    position: relative;
+    margin-top: 117px;
+    width: 226px;
+  }
+  &__list1 &__Item4 {
+    position: relative;
+    margin-top: 52px;
+    width: 260px;
+  }
+  &__list2 &__Item4 {
+    position: relative;
+    margin-top: 30px;
+    width: 257px;
+  }
+  &__label {
+    position: absolute;
+    top: -52px;
+    left: 0;
+  }
+
+  &__Item4 &__label {
+    position: absolute;
+    top: -52px;
+    left: 20px;
+    transform: translateX(-50%);
+  }
+
+  &__Item1 &__image {
+    margin-left: 50px;
+  }
+
+  &__list2 &__Item1 &__image {
+    margin-left: 0;
+  }
+
+  &__Item4 &__image {
+    margin-left: 0;
+  }
+
+  &__Item3--reverse &__image,
+  &__Item4--reverse &__image {
+    text-align: right;
+  }
+
+  &__info {
+    font-size: 1.4rem;
+    font-family: "Sawarabi Mincho";
+    font-weight: 400;
+    color: #000;
+    line-height: 21px;
+    border-bottom: 2px dotted #494949;
+    padding-left: 17px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__Item3--reverse &__info,
+  &__Item4--reverse &__info {
+    padding-left: 0;
+    padding-right: 17px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: unset;
+    transform: translateY(-50%);
+  }
+}
