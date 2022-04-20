@@ -21,8 +21,8 @@
   src: local("Yu Gothic Medium");
 }
 
-$font-family-primary: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro",
-  "Sawarabi Mincho", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo",
+$font-family-primary: "Sawarabi Mincho", "游ゴシック", YuGothic,
+  "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo",
   sans-serif;
 
 $font-family-jp-sans-serif: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
@@ -34,7 +34,7 @@ $font-family-jp-sans-serif: "Noto Sans JP", "游ゴシック Medium", "游ゴシ
 
 // ・明朝体
 // --------------------
-$font-family-jp-serif: "Noto Serif JP", "Sawarabi Mincho", "Yu Mincho", YuMincho,
+$font-family-jp-serif: "Sawarabi Mincho", "Noto Serif JP", "Yu Mincho", YuMincho,
   "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
 
 // ・独自に追加したWebフォントなど

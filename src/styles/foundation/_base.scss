@@ -13,10 +13,13 @@ body {
 body {
   font-family: $font-family-primary;
   color: $base-font-color;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.9rem;
+  user-select: none;
+  -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -35,6 +38,20 @@ a {
   &:hover {
     color: $sub-font-color;
   }
+}
+
+button {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+}
+
+.is-hidden {
+  display: none;
 }
 
 @include mq(lg, max) {
