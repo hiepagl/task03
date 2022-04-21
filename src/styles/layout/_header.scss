@@ -1,4 +1,189 @@
 .c-header {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 610px;
+  z-index: 2;
+  pointer-events: none;
+
+  &__nav {
+    position: absolute;
+    top: 66px;
+    left: -2px;
+    pointer-events: all;
+    & > ul > li {
+      background-image: url(../images/point/pointLabel.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-left: 21px;
+      width: 200px;
+      height: 40px;
+      & > a {
+        font-size: 1.6rem;
+        color: #fff;
+        line-height: 40px;
+      }
+    }
+    & > ul > * ~ * {
+      margin-top: 16px;
+    }
+  }
+
+  &__leaf1 {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
+  }
+
+  &__leaf2 {
+    position: absolute;
+    bottom: -190px;
+    right: -30px;
+    transition: all 0.7s ease-in-out;
+  }
+
+  &__drop6 {
+    position: absolute;
+    top: 87px;
+    left: 50%;
+    transform: translateX(-400px);
+    transition: all 2s ease-in-out;
+    animation: drop6 4s ease-in-out infinite;
+  }
+
+  &__drop5 {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(125px);
+    transition: all 2s ease-in-out;
+    animation: drop5 4s ease-in-out infinite;
+  }
+
+  &__drop4 {
+    position: absolute;
+    top: 111px;
+    left: 50%;
+    transform: translateX(610px);
+    transition: all 2s ease-in-out;
+    animation: drop4 4s ease-in-out infinite;
+  }
+
+  &__drop3 {
+    position: absolute;
+    top: 548px;
+    left: 50%;
+    transform: translateX(400px);
+    transition: all 2s ease-in-out;
+    animation: drop3 4s ease-in-out infinite;
+  }
+
+  &__drop2 {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    transform: translateX(-410px);
+    transition: all 2s ease-in-out;
+    animation: drop2 4s ease-in-out infinite;
+  }
+
+  &__drop1 {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-645px);
+    transition: all 2s ease-in-out;
+    animation: drop1 4s ease-in-out infinite;
+  }
+
+  &.is-active &__container {
+    .c-header__leaf1 {
+      transform: translate(-100%, -50px);
+    }
+    .c-header__leaf2 {
+      transform: translateX(50px);
+    }
+
+    @for $i from 1 through 6 {
+      .c-header__drop#{$i} {
+        top: -150px;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+
+  &__menuMobile {
+    display: none;
+  }
+}
+
+@keyframes drop6 {
+  0% {
+    transform: translate(-400px, -10px);
+  }
+  50% {
+    transform: translate(-400px, 10px);
+  }
+  100% {
+    transform: translate(-400px, -10px);
+  }
+}
+@keyframes drop5 {
+  0% {
+    transform: translate(125px, 10px);
+  }
+  50% {
+    transform: translate(125px, -10px);
+  }
+  100% {
+    transform: translate(125px, 10px);
+  }
+}
+@keyframes drop4 {
+  0% {
+    transform: translate(610px, -10px);
+  }
+  50% {
+    transform: translate(610px, 10px);
+  }
+  100% {
+    transform: translate(610px, -10px);
+  }
+}
+@keyframes drop3 {
+  0% {
+    transform: translate(400px, 10px);
+  }
+  50% {
+    transform: translate(400px, -10px);
+  }
+  100% {
+    transform: translate(400px, 10px);
+  }
+}
+@keyframes drop2 {
+  0% {
+    transform: translate(-410px, -10px);
+  }
+  50% {
+    transform: translate(-410px, 10px);
+  }
+  100% {
+    transform: translate(-410px, -10px);
+  }
+}
+@keyframes drop1 {
+  0% {
+    transform: translate(-645px, 10px);
+  }
+  50% {
+    transform: translate(-645px, -10px);
+  }
+  100% {
+    transform: translate(-645px, 10px);
+  }
 }

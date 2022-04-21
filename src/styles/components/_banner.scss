@@ -1,26 +1,44 @@
-.p-banner1 {
+.p-banner {
   padding-top: 110px;
   padding-bottom: 50px;
   &__container {
-    max-width: 1120px;
+    max-width: 1090px;
     margin: auto;
+    padding: 0 30px;
   }
 
-  &__wrapper {
+  &__bg1 {
     background-image: url(../images/banner1.jpg);
-    background-position: center;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    border-radius: 50px;
+    position: relative;
+  }
+
+  &__bg2 {
+    background-image: url(../images/banner2.jpg);
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 260px;
     border-radius: 50px;
     position: relative;
+    & > figure {
+      position: absolute;
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__content {
+    width: 100%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     & > h3 {
       font-size: 2rem;
       font-weight: 400;

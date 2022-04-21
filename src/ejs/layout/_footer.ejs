@@ -1,5 +1,21 @@
 <footer class="l-footer">
-    
+  <div class="l-footer__container">
+    <div class="l-footer__wrapper">
+      <ul class="l-footer__contact">
+        <li><p>商品に関するお問い合わせは</p></li>
+        <li><p>健栄製薬株式会社</p></li>
+        <li>
+          <p>TEL |｜06-6231-5626　受付時間 |｜8:45〜17:30(土日祝日を除く)</p>
+        </li>
+      </ul>
+      <div class="l-footer__logo">
+        <figure>
+          <img src="./assets/images/logo_kenei.gif" alt="logo_kenei" />
+        </figure>
+        <p>©KENEI Pharmaceutical</p>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->
 
@@ -8,20 +24,21 @@
 <script src="<%- typeof basePath !== 'undefined' ? basePath : '' %>/assets/scripts/slick.min.js"></script>
 <script src="<%- typeof basePath !== 'undefined' ? basePath : '' %>/assets/scripts/main.js"></script>
 <script src="<%- typeof basePath !== 'undefined' ? basePath : '' %>/assets/scripts/owl.carousel.js"></script>
+<script src="<%- typeof basePath !== 'undefined' ? basePath : '' %>/assets/scripts/app.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: false,
-            items: 1,
-        })
-        $('#dismiss').on('click', function () {
-            $('#sidebar').removeClass('active');
-        });
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').addClass('active');
-        });
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      items: 1,
     });
+    $("#dismiss").on("click", function () {
+      $("#sidebar").removeClass("active");
+    });
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+    });
+  });
 </script>

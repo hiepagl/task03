@@ -1,9 +1,9 @@
 .p-hero {
   padding-top: 100px;
   &__container {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: auto;
-    padding: 0 40px;
+    padding: 0 30px;
   }
 
   &__wrapper {
@@ -11,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 50px;
     height: 480px;
   }
 
@@ -26,7 +27,6 @@
 
     & > h4 {
       font-size: 1.6rem;
-      font-family: "Sawarabi Mincho";
       color: #000;
       line-height: 4;
       text-align: center;
@@ -65,15 +65,11 @@
   &__info {
     & > span {
       font-size: 1.6rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: #000;
     }
 
     & > p {
       font-size: 3rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: #000;
     }
   }

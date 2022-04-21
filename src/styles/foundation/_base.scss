@@ -34,9 +34,11 @@ a {
   display: block;
   cursor: pointer;
   text-decoration: none;
+  color: #000;
 
   &:hover {
     color: $sub-font-color;
+    opacity: 0.7;
   }
 }
 

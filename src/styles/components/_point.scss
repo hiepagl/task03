@@ -109,7 +109,7 @@
 
   @for $i from 1 through 9 {
     &__Item#{$i} {
-      @include background($i);
+      background-image: url("../images/point/item#{$i}.png");
     }
 
     #p-point__Item#{$i}:checked {
