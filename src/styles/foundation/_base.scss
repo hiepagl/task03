@@ -16,6 +16,8 @@ body {
   font-weight: 400;
   font-size: 1.9rem;
   user-select: none;
+  position: relative;
+  overflow-x: hidden;
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

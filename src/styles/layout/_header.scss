@@ -3,9 +3,14 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 610px;
+  height: 800px;
+  overflow: hidden;
   z-index: 2;
   pointer-events: none;
+
+  @include mq(xl, max) {
+    position: absolute;
+  }
 
   &__nav {
     position: absolute;
@@ -17,32 +22,33 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      padding-left: 21px;
+      padding-left: 22px;
       width: 200px;
       height: 40px;
       & > a {
         font-size: 1.6rem;
         color: #fff;
         line-height: 40px;
+        letter-spacing: 1.5px;
       }
     }
     & > ul > * ~ * {
-      margin-top: 16px;
+      margin-top: 15px;
     }
   }
 
   &__leaf1 {
     position: absolute;
-    top: -50px;
+    top: -44px;
     left: 50%;
-    transform: translateX(-100%);
+    transform: translateX(-273px);
     transition: all 0.7s ease-in-out;
   }
 
   &__leaf2 {
     position: absolute;
-    bottom: -190px;
-    right: -30px;
+    bottom: -20px;
+    right: -32px;
     transition: all 0.7s ease-in-out;
   }
 
@@ -50,7 +56,7 @@
     position: absolute;
     top: 87px;
     left: 50%;
-    transform: translateX(-400px);
+    transform: translateX(-412px);
     transition: all 2s ease-in-out;
     animation: drop6 4s ease-in-out infinite;
   }
@@ -59,7 +65,7 @@
     position: absolute;
     top: 62px;
     left: 50%;
-    transform: translateX(125px);
+    transform: translateX(139px);
     transition: all 2s ease-in-out;
     animation: drop5 4s ease-in-out infinite;
   }
@@ -77,7 +83,7 @@
     position: absolute;
     top: 548px;
     left: 50%;
-    transform: translateX(400px);
+    transform: translateX(399px);
     transition: all 2s ease-in-out;
     animation: drop3 4s ease-in-out infinite;
   }
@@ -86,7 +92,7 @@
     position: absolute;
     top: 560px;
     left: 50%;
-    transform: translateX(-410px);
+    transform: translateX(-398px);
     transition: all 2s ease-in-out;
     animation: drop2 4s ease-in-out infinite;
   }
@@ -95,7 +101,7 @@
     position: absolute;
     top: 450px;
     left: 50%;
-    transform: translateX(-645px);
+    transform: translateX(-647px);
     transition: all 2s ease-in-out;
     animation: drop1 4s ease-in-out infinite;
   }
@@ -121,69 +127,69 @@
   }
 }
 
-@keyframes drop6 {
-  0% {
-    transform: translate(-400px, -10px);
-  }
-  50% {
-    transform: translate(-400px, 10px);
-  }
-  100% {
-    transform: translate(-400px, -10px);
-  }
-}
-@keyframes drop5 {
-  0% {
-    transform: translate(125px, 10px);
-  }
-  50% {
-    transform: translate(125px, -10px);
-  }
-  100% {
-    transform: translate(125px, 10px);
-  }
-}
-@keyframes drop4 {
-  0% {
-    transform: translate(610px, -10px);
-  }
-  50% {
-    transform: translate(610px, 10px);
-  }
-  100% {
-    transform: translate(610px, -10px);
-  }
-}
-@keyframes drop3 {
-  0% {
-    transform: translate(400px, 10px);
-  }
-  50% {
-    transform: translate(400px, -10px);
-  }
-  100% {
-    transform: translate(400px, 10px);
-  }
-}
-@keyframes drop2 {
-  0% {
-    transform: translate(-410px, -10px);
-  }
-  50% {
-    transform: translate(-410px, 10px);
-  }
-  100% {
-    transform: translate(-410px, -10px);
-  }
-}
-@keyframes drop1 {
-  0% {
-    transform: translate(-645px, 10px);
-  }
-  50% {
-    transform: translate(-645px, -10px);
-  }
-  100% {
-    transform: translate(-645px, 10px);
-  }
-}
+// @keyframes drop6 {
+//   0% {
+//     transform: translate(-412px, -10px);
+//   }
+//   50% {
+//     transform: translate(-412px, 10px);
+//   }
+//   100% {
+//     transform: translate(-412px, -10px);
+//   }
+// }
+// @keyframes drop5 {
+//   0% {
+//     transform: translate(139px, 10px);
+//   }
+//   50% {
+//     transform: translate(139px, -10px);
+//   }
+//   100% {
+//     transform: translate(139px, 10px);
+//   }
+// }
+// @keyframes drop4 {
+//   0% {
+//     transform: translate(610px, -10px);
+//   }
+//   50% {
+//     transform: translate(610px, 10px);
+//   }
+//   100% {
+//     transform: translate(610px, -10px);
+//   }
+// }
+// @keyframes drop3 {
+//   0% {
+//     transform: translate(399px, 10px);
+//   }
+//   50% {
+//     transform: translate(399px, -10px);
+//   }
+//   100% {
+//     transform: translate(399px, 10px);
+//   }
+// }
+// @keyframes drop2 {
+//   0% {
+//     transform: translate(-398px, -10px);
+//   }
+//   50% {
+//     transform: translate(-398px, 10px);
+//   }
+//   100% {
+//     transform: translate(-398px, -10px);
+//   }
+// }
+// @keyframes drop1 {
+//   0% {
+//     transform: translate(-647px, 10px);
+//   }
+//   50% {
+//     transform: translate(-647px, -10px);
+//   }
+//   100% {
+//     transform: translate(-647px, 10px);
+//   }
+// }

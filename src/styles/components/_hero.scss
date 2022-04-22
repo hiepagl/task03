@@ -16,13 +16,14 @@
   }
 
   &__content {
-    width: 50%;
+    width: 55%;
     text-align: center;
-    padding-top: 93px;
+    padding-top: 100px;
     padding-left: 50px;
 
     & > figure {
       margin-bottom: 14px;
+      margin-right: 5px;
     }
 
     & > h4 {
@@ -31,6 +32,8 @@
       line-height: 4;
       text-align: center;
       position: relative;
+      letter-spacing: 1.5px;
+      margin-left: -5px;
 
       &::before {
         content: "";
@@ -40,7 +43,7 @@
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-55%);
       }
     }
 
@@ -52,17 +55,20 @@
       height: 55px;
       background-color: #25a989;
       border-radius: 27.5px;
-      margin-top: 25px;
+      margin-top: 21px;
       & > p {
-        font-size: 24px;
-        font-family: "Sawarabi Mincho";
+        font-size: 2.4rem;
         color: rgb(255, 255, 255);
         line-height: 55px;
+        letter-spacing: 4.5px;
       }
     }
   }
 
   &__info {
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+    margin-right: 5px;
     & > span {
       font-size: 1.6rem;
       color: #000;
@@ -71,6 +77,8 @@
     & > p {
       font-size: 3rem;
       color: #000;
+      letter-spacing: 3px;
+      margin-top: 1px;
     }
   }
 }

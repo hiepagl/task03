@@ -14,25 +14,22 @@
 
   &__title {
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 50%;
     transform: translateX(-50%);
     & > h3 {
       font-size: 2rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
-      color: #000;
-      //   line-height: 50px;
-      text-align: center;
-    }
-    & > h2 {
-      font-size: 4.6rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
-      line-height: 50px;
       color: #000;
       text-align: center;
       letter-spacing: 2px;
+      margin-right: 8px;
+    }
+    & > h2 {
+      font-size: 4.6rem;
+      line-height: 50px;
+      color: #000;
+      text-align: center;
+      letter-spacing: 9px;
     }
   }
 
@@ -55,11 +52,17 @@
 
   &__list1 &__wrapItem {
     padding: 20px;
+    @include mq(xl, max) {
+      width: 40%;
+    }
   }
   &__list1 &__Item1 {
     position: relative;
     margin-top: 52px;
     width: 172px;
+    @include mq(xl, max) {
+      margin-top: 93px;
+    }
   }
   &__list2 &__Item1 {
     position: relative;
@@ -90,6 +93,9 @@
     position: relative;
     margin-top: 52px;
     width: 260px;
+    @include mq(xl, max) {
+      margin-top: 83px;
+    }
   }
   &__list2 &__Item4 {
     position: relative;
