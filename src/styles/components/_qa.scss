@@ -6,7 +6,7 @@
 
   &__wrapper {
     padding: 0 85px;
-    padding-top: 90px;
+    padding-top: 85px;
 
     & > h2 {
       color: #176b6a;
@@ -14,16 +14,24 @@
       font-size: 3.6rem;
       line-height: 1;
       text-align: center;
+      letter-spacing: 4px;
     }
   }
 
   &__content {
-    margin-top: 50px;
+    margin-top: 46px;
+    &:first-child {
+      margin-top: 50px;
+    }
+    &:last-child {
+      margin-top: 43px;
+    }
     & > dd {
+      margin-top: 8.5px;
       color: #333333;
       font-size: 1.4rem;
-      line-height: 1.5;
-      margin-top: 10px;
+      line-height: 1.1;
+      letter-spacing: -2.8px;
     }
   }
 
@@ -37,6 +45,7 @@
       font-size: 1.4rem;
       line-height: 55px;
       font-weight: 400;
+      letter-spacing: 1.4px;
     }
   }
 }

@@ -48,6 +48,13 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
+    margin-left: 10px;
+  }
+
+  &__label {
+    position: absolute;
+    top: -52px;
+    left: 0;
   }
 
   &__list1 &__wrapItem {
@@ -63,31 +70,67 @@
     @include mq(xl, max) {
       margin-top: 93px;
     }
+    & .p-products__info {
+      transform: translateY(-35px);
+      padding-left: 6px;
+    }
   }
   &__list2 &__Item1 {
     position: relative;
-    margin-top: 90px;
-    width: 224px;
+    width: 229px;
+    margin-top: 95px;
+    & .p-products__info {
+      transform: translateY(-36px);
+      right: 16px;
+      padding-left: 11px;
+      line-height: 26px;
+    }
   }
   &__list1 &__Item2 {
     position: relative;
     margin-top: 93px;
     width: 226px;
+    & .p-products__info {
+      transform: translateY(-25px);
+      padding-left: 8px;
+      right: -1px;
+    }
   }
   &__list2 &__Item2 {
     position: relative;
-    margin-top: 145px;
     width: 237px;
+    margin-top: 145px;
+    padding-left: 2px;
+    & .p-products__label {
+      top: -57px;
+      left: 2px;
+    }
+    & .p-products__info {
+      right: -4px;
+      padding-left: 50px;
+      transform: translateY(2px);
+      line-height: 26px;
+    }
   }
   &__list1 &__Item3 {
     position: relative;
     margin-top: 93px;
     width: 286px;
+    & .p-products__info {
+      transform: translateY(-25px);
+      padding-left: 20px;
+      right: 3px;
+    }
   }
   &__list2 &__Item3 {
     position: relative;
     margin-top: 117px;
     width: 226px;
+    & .p-products__info {
+      transform: translateY(-34px);
+      left: 2px;
+      padding-right: 15px;
+    }
   }
   &__list1 &__Item4 {
     position: relative;
@@ -96,16 +139,21 @@
     @include mq(xl, max) {
       margin-top: 83px;
     }
+    & .p-products__info {
+      transform: translateY(-14px);
+      right: 1px;
+    }
   }
   &__list2 &__Item4 {
     position: relative;
     margin-top: 30px;
     width: 257px;
-  }
-  &__label {
-    position: absolute;
-    top: -52px;
-    left: 0;
+    & .p-products__info {
+      left: -30px;
+      padding-right: 30px;
+      transform: translateY(-40px);
+      line-height: 28px;
+    }
   }
 
   &__Item4 &__label {
@@ -134,8 +182,6 @@
 
   &__info {
     font-size: 1.4rem;
-    font-family: "Sawarabi Mincho";
-    font-weight: 400;
     color: #000;
     line-height: 21px;
     border-bottom: 2px dotted #494949;
@@ -144,6 +190,7 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+    letter-spacing: 1.2px;
   }
 
   &__Item3--reverse &__info,

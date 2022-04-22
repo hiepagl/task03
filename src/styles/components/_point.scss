@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 2276px;
 
   &__container {
     max-width: 1140px;
@@ -13,13 +12,14 @@
 
   &__wrapper {
     padding-top: 100px;
+    padding-bottom: 110px;
     & > p {
       font-size: 1.2rem;
-      font-weight: 400;
       color: #333333;
       text-align: center;
       line-height: 1;
-      margin-top: 50px;
+      margin-top: 48px;
+      letter-spacing: -1.1px;
     }
   }
 
@@ -58,36 +58,33 @@
 
   &__number > p {
     font-size: 2.2rem;
-    font-family: "Sawarabi Mincho";
-    font-weight: 400;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     line-height: 1.182;
-    margin-top: 35px;
+    margin-top: 32px;
   }
 
   &__title {
     & > h2 {
       font-size: 3.6rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: #176b6a;
       line-height: 1;
       margin-top: 3px;
-      margin-bottom: 27px;
+      margin-bottom: 22px;
+      letter-spacing: 3.7px;
     }
 
     & > p {
       font-size: 1.4rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: rgb(0, 0, 0);
       line-height: 1.857;
+      margin-left: 3px;
+      letter-spacing: 1.4px;
     }
   }
 
   &__list {
-    margin-top: 60px;
+    margin-top: 43px;
     display: flex;
     flex-wrap: wrap;
     margin: -10px;
@@ -114,7 +111,7 @@
 
     #p-point__Item#{$i}:checked {
       & + .p-point__info {
-        display: block;
+        display: flex;
       }
     }
   }
@@ -129,21 +126,23 @@
     opacity: 0.8;
     border-radius: 26px;
     text-align: center;
-    padding: 50px 45px 0 45px;
+    padding: 0 45px;
     z-index: 1;
     cursor: pointer;
     display: none;
+    flex-direction: column;
+    justify-content: center;
     & > h3 {
       font-size: 2.4rem;
-      font-family: "Sawarabi Mincho";
       color: #176b6a;
       line-height: 1.083;
       position: relative;
-      margin-bottom: 40px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
       &::after {
         content: "";
         position: absolute;
-        bottom: -20px;
+        bottom: -18px;
         left: 50%;
         transform: translateX(-50%);
         width: 50px;
@@ -154,18 +153,17 @@
 
     & > p {
       font-size: 1.2rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: #000000;
       line-height: 1.75;
       text-align: left;
+      letter-spacing: 1.2px;
     }
   }
 
   &__label {
     max-width: 100%;
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
     & > span {
       width: 100%;
       font-size: 1.6rem;
@@ -177,6 +175,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      letter-spacing: 1.5px;
     }
   }
 
@@ -192,14 +191,14 @@
 
   &__partner {
     width: 100%;
+    padding-top: 7px;
     & > h2 {
       font-size: 3rem;
-      font-family: "Sawarabi Mincho";
-      font-weight: 400;
       color: #176b6a;
       text-align: center;
       line-height: 1;
-      margin-bottom: 50px;
+      margin-bottom: 48px;
+      letter-spacing: 3px;
     }
   }
   &__partnerList {

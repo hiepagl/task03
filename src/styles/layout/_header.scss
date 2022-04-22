@@ -17,6 +17,9 @@
     top: 66px;
     left: -2px;
     pointer-events: all;
+    & > ul > * ~ * {
+      margin-top: 16px;
+    }
     & > ul > li {
       background-image: url(../images/point/pointLabel.png);
       background-position: center;
@@ -31,9 +34,9 @@
         line-height: 40px;
         letter-spacing: 1.5px;
       }
-    }
-    & > ul > * ~ * {
-      margin-top: 15px;
+      &:nth-child(even) {
+        margin-top: 14px;
+      }
     }
   }
 
