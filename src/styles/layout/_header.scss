@@ -12,13 +12,28 @@
     position: absolute;
   }
 
+  @include mq(lg, max) {
+    width: 100%;
+    height: 100%;
+  }
+
   &__nav {
     position: absolute;
     top: 66px;
     left: -2px;
     pointer-events: all;
+    @include mq(lg, max) {
+      position: relative;
+      background-color: #1f4242;
+      height: 100%;
+      padding-top: 120px;
+      display: none;
+    }
     & > ul > * ~ * {
       margin-top: 16px;
+      @include mq(lg, max) {
+        margin-top: 0;
+      }
     }
     & > ul > li {
       background-image: url(../images/point/pointLabel.png);
@@ -28,15 +43,46 @@
       padding-left: 22px;
       width: 200px;
       height: 40px;
+      @include mq(lg, max) {
+        background-image: none;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        &:first-child > a {
+          border-top: none;
+        }
+      }
       & > a {
         font-size: 1.6rem;
         color: #fff;
         line-height: 40px;
         letter-spacing: 1.5px;
+        @include mq(lg, max) {
+          font-size: 4rem;
+          letter-spacing: 4px;
+          line-height: 4;
+          border-bottom: 1px solid #3a5656;
+          border-top: 1px solid #1d3636;
+        }
       }
       &:nth-child(even) {
         margin-top: 14px;
+        @include mq(lg, max) {
+          margin-top: 0;
+        }
       }
+    }
+  }
+
+  &__menuMobile.is-active + &__nav {
+    @include mq(lg, max) {
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 
@@ -46,6 +92,26 @@
     left: 50%;
     transform: translateX(-273px);
     transition: all 0.7s ease-in-out;
+    @include mq(md, max) {
+      width: 229px;
+      height: 194px;
+      transform: translateX(-180px);
+    }
+    @include mq(sm, max) {
+      width: 114.5px;
+      height: 97px;
+      transform: translateX(-180px);
+    }
+  }
+  &__menuMobile.is-active ~ &__leaf1 {
+    @include mq(lg, max) {
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      transform: rotate(-105deg);
+      transition: all;
+      opacity: 0.5;
+    }
   }
 
   &__leaf2 {
@@ -53,68 +119,63 @@
     bottom: -20px;
     right: -32px;
     transition: all 0.7s ease-in-out;
+    @include mq(lg, max) {
+      bottom: unset;
+      top: 500px;
+      right: -80px;
+    }
+    @include mq(md, max) {
+      top: 1000px;
+      width: 211px;
+      height: 214px;
+    }
+    @include mq(sm, max) {
+      width: 105.5px;
+      height: 107px;
+    }
   }
-
-  &__drop6 {
-    position: absolute;
-    top: 87px;
-    left: 50%;
-    transform: translateX(-412px);
-    transition: all 2s ease-in-out;
-    animation: drop6 4s ease-in-out infinite;
-  }
-
-  &__drop5 {
-    position: absolute;
-    top: 62px;
-    left: 50%;
-    transform: translateX(139px);
-    transition: all 2s ease-in-out;
-    animation: drop5 4s ease-in-out infinite;
-  }
-
-  &__drop4 {
-    position: absolute;
-    top: 111px;
-    left: 50%;
-    transform: translateX(610px);
-    transition: all 2s ease-in-out;
-    animation: drop4 4s ease-in-out infinite;
-  }
-
-  &__drop3 {
-    position: absolute;
-    top: 548px;
-    left: 50%;
-    transform: translateX(399px);
-    transition: all 2s ease-in-out;
-    animation: drop3 4s ease-in-out infinite;
-  }
-
-  &__drop2 {
-    position: absolute;
-    top: 560px;
-    left: 50%;
-    transform: translateX(-398px);
-    transition: all 2s ease-in-out;
-    animation: drop2 4s ease-in-out infinite;
-  }
-
-  &__drop1 {
-    position: absolute;
-    top: 450px;
-    left: 50%;
-    transform: translateX(-647px);
-    transition: all 2s ease-in-out;
-    animation: drop1 4s ease-in-out infinite;
+  &__menuMobile.is-active ~ &__leaf2 {
+    @include mq(lg, max) {
+      position: absolute;
+      bottom: unset;
+      right: -60px;
+      top: 600px;
+      transform: rotate(-27deg);
+      transition: all;
+      opacity: 0.5;
+    }
   }
 
   &.is-active &__container {
     .c-header__leaf1 {
-      transform: translate(-100%, -50px);
+      transform: translate(-273px, -50px);
+      @include mq(md, max) {
+        transform: translate(-180px, -50px);
+      }
+    }
+    .c-header__menuMobile.is-active ~ .c-header__leaf1 {
+      @include mq(lg, max) {
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        transform: rotate(-105deg);
+        transition: all;
+        opacity: 0.5;
+      }
     }
     .c-header__leaf2 {
       transform: translateX(50px);
+    }
+    .c-header__menuMobile.is-active ~ .c-header__leaf2 {
+      @include mq(lg, max) {
+        position: absolute;
+        bottom: unset;
+        right: -60px;
+        top: 600px;
+        transform: rotate(-27deg);
+        transition: all;
+        opacity: 0.5;
+      }
     }
 
     @for $i from 1 through 6 {
@@ -125,74 +186,192 @@
     }
   }
 
+  &__menuMobile.is-active ~ &__leaf1 {
+    @include mq(lg, max) {
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      transform: rotate(-105deg);
+      transition: all;
+      opacity: 0.5;
+    }
+  }
+
+  &__menuMobile.is-active ~ &__leaf2 {
+    @include mq(lg, max) {
+      position: absolute;
+      bottom: unset;
+      right: -60px;
+      top: 600px;
+      transform: rotate(-27deg);
+      transition: all;
+      opacity: 0.5;
+    }
+  }
+
   &__menuMobile {
     display: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: all;
+    @include mq(lg, max) {
+      display: block;
+    }
+    & > img {
+      display: none;
+    }
+    @include mq(lg, max) {
+      & > img:first-child {
+        display: block;
+      }
+      &.is-active > img:first-child {
+        display: none;
+      }
+      &.is-active > img:last-child {
+        display: block;
+      }
+    }
+  }
+
+  &__drop6 {
+    position: absolute;
+    top: 87px;
+    left: 50%;
+    transform: translateX(-412px);
+    transition: all 2s ease-in-out;
+    animation: drop6 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__drop5 {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(139px);
+    transition: all 2s ease-in-out;
+    animation: drop5 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__drop4 {
+    position: absolute;
+    top: 111px;
+    left: 50%;
+    transform: translateX(610px);
+    transition: all 2s ease-in-out;
+    animation: drop4 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__drop3 {
+    position: absolute;
+    top: 548px;
+    left: 50%;
+    transform: translateX(399px);
+    transition: all 2s ease-in-out;
+    animation: drop3 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__drop2 {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    transform: translateX(-398px);
+    transition: all 2s ease-in-out;
+    animation: drop2 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__drop1 {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-647px);
+    transition: all 2s ease-in-out;
+    animation: drop1 4s ease-in-out infinite;
+    @include mq(lg, max) {
+      display: none;
+    }
   }
 }
 
-// @keyframes drop6 {
-//   0% {
-//     transform: translate(-412px, -10px);
-//   }
-//   50% {
-//     transform: translate(-412px, 10px);
-//   }
-//   100% {
-//     transform: translate(-412px, -10px);
-//   }
-// }
-// @keyframes drop5 {
-//   0% {
-//     transform: translate(139px, 10px);
-//   }
-//   50% {
-//     transform: translate(139px, -10px);
-//   }
-//   100% {
-//     transform: translate(139px, 10px);
-//   }
-// }
-// @keyframes drop4 {
-//   0% {
-//     transform: translate(610px, -10px);
-//   }
-//   50% {
-//     transform: translate(610px, 10px);
-//   }
-//   100% {
-//     transform: translate(610px, -10px);
-//   }
-// }
-// @keyframes drop3 {
-//   0% {
-//     transform: translate(399px, 10px);
-//   }
-//   50% {
-//     transform: translate(399px, -10px);
-//   }
-//   100% {
-//     transform: translate(399px, 10px);
-//   }
-// }
-// @keyframes drop2 {
-//   0% {
-//     transform: translate(-398px, -10px);
-//   }
-//   50% {
-//     transform: translate(-398px, 10px);
-//   }
-//   100% {
-//     transform: translate(-398px, -10px);
-//   }
-// }
-// @keyframes drop1 {
-//   0% {
-//     transform: translate(-647px, 10px);
-//   }
-//   50% {
-//     transform: translate(-647px, -10px);
-//   }
-//   100% {
-//     transform: translate(-647px, 10px);
-//   }
-// }
+@keyframes drop6 {
+  0% {
+    transform: translate(-412px, -10px);
+  }
+  50% {
+    transform: translate(-412px, 10px);
+  }
+  100% {
+    transform: translate(-412px, -10px);
+  }
+}
+@keyframes drop5 {
+  0% {
+    transform: translate(139px, 10px);
+  }
+  50% {
+    transform: translate(139px, -10px);
+  }
+  100% {
+    transform: translate(139px, 10px);
+  }
+}
+@keyframes drop4 {
+  0% {
+    transform: translate(610px, -10px);
+  }
+  50% {
+    transform: translate(610px, 10px);
+  }
+  100% {
+    transform: translate(610px, -10px);
+  }
+}
+@keyframes drop3 {
+  0% {
+    transform: translate(399px, 10px);
+  }
+  50% {
+    transform: translate(399px, -10px);
+  }
+  100% {
+    transform: translate(399px, 10px);
+  }
+}
+@keyframes drop2 {
+  0% {
+    transform: translate(-398px, -10px);
+  }
+  50% {
+    transform: translate(-398px, 10px);
+  }
+  100% {
+    transform: translate(-398px, -10px);
+  }
+}
+@keyframes drop1 {
+  0% {
+    transform: translate(-647px, 10px);
+  }
+  50% {
+    transform: translate(-647px, -10px);
+  }
+  100% {
+    transform: translate(-647px, 10px);
+  }
+}

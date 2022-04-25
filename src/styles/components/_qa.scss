@@ -7,6 +7,10 @@
   &__wrapper {
     padding: 0 85px;
     padding-top: 85px;
+    @include mq(md, max) {
+      padding: 0 30px;
+      padding-top: 80px;
+    }
 
     & > h2 {
       color: #176b6a;
@@ -15,30 +19,49 @@
       line-height: 1;
       text-align: center;
       letter-spacing: 4px;
+      @include mq(md, max) {
+        font-size: 4rem;
+      }
     }
   }
 
   &__content {
-    margin-top: 46px;
-    &:first-child {
-      margin-top: 50px;
-    }
-    &:last-child {
-      margin-top: 43px;
+    margin-top: 44px;
+    &:nth-child(2) {
+      margin-top: 52px;
     }
     & > dd {
-      margin-top: 8.5px;
+      margin-top: 8px;
       color: #333333;
       font-size: 1.4rem;
-      line-height: 1.1;
-      letter-spacing: -2.8px;
+      line-height: 1.5;
+      letter-spacing: 1.4px;
+      @include mq(md, max) {
+        font-size: 2.6rem;
+        line-height: 1.7;
+        letter-spacing: 2.6px;
+      }
     }
   }
 
   &__title {
     display: flex;
+    @include mq(md, max) {
+      align-items: center;
+    }
     & > figure {
       margin-right: 15px;
+      @include mq(md, max) {
+        min-width: 80px;
+        height: 74px;
+        margin-right: 20px;
+      }
+      & > img {
+        @include mq(md, max) {
+          width: 80px;
+          height: 74px;
+        }
+      }
     }
     & > h3 {
       color: #176b6a;
@@ -46,6 +69,11 @@
       line-height: 55px;
       font-weight: 400;
       letter-spacing: 1.4px;
+      @include mq(md, max) {
+        font-size: 2.6rem;
+        line-height: 1.7;
+        letter-spacing: 2.6px;
+      }
     }
   }
 }

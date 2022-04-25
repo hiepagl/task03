@@ -1,4 +1,5 @@
 .p-intro {
+  margin-bottom: -6px;
   &__container {
     max-width: 900px;
     margin: auto;
@@ -7,7 +8,7 @@
 
   &__content {
     margin-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 31px;
     border-bottom: 1px solid #176b6a;
     & > dt {
       display: flex;
@@ -15,28 +16,48 @@
 
     & > dd {
       position: relative;
-      font-size: 1.4rem;
+      margin-top: 20px;
+      padding-right: 43px;
       color: #333333;
-      margin-top: 25px;
-      padding-right: 45px;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      letter-spacing: 1.4px;
       & > figure {
         position: absolute;
         right: 0;
         top: 0;
-        transform: translateY(-100%);
+        transform: translateY(-85%);
       }
     }
   }
 
   &__title {
-    padding-top: 20px;
+    padding-top: 22px;
+    @include mq(md, max) {
+      padding-top: 0;
+      padding-right: 20px;
+    }
     & > h3 {
       font-size: 1.4rem;
       color: #333333;
+      line-height: 22px;
+      letter-spacing: 1.4px;
+      @include mq(md, max) {
+        font-size: 2.2rem;
+        line-height: 2;
+        letter-spacing: 2.2px;
+      }
     }
     & > h2 {
       font-size: 2.5rem;
       color: #333333;
+      line-height: 1.2;
+      letter-spacing: 2.5px;
+      @include mq(md, max) {
+        font-size: 3rem;
+        line-height: 1.7;
+        letter-spacing: 3px;
+      }
     }
   }
 
@@ -51,10 +72,26 @@
       border-radius: 10px;
       position: relative;
       margin-right: 15px;
+      @include mq(md, max) {
+        background-image: none;
+        min-width: 159px;
+        width: 159px;
+        height: auto;
+        margin-right: 20px;
+        margin-top: 11px;
+        border-radius: 0;
+      }
       & > img {
         position: absolute;
         left: 15px;
         bottom: 18px;
+        @include mq(md, max) {
+          position: relative;
+          left: auto;
+          bottom: auto;
+          width: 159px;
+          height: 65px;
+        }
       }
     }
   }

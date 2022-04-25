@@ -1,5 +1,12 @@
 .p-hero {
   padding-top: 100px;
+  @include mq(md, max) {
+    padding-top: 90px;
+  }
+  @include mq(sm, max) {
+    padding-top: 45px;
+  }
+
   &__container {
     max-width: 1180px;
     margin: auto;
@@ -13,6 +20,15 @@
     background-size: cover;
     border-radius: 50px;
     height: 480px;
+    @include mq(md, max) {
+      background-image: url(../images/bg-main-sm.png);
+      height: 1043px;
+      background-position: bottom;
+    }
+    @include mq(sm, max) {
+      width: 50%;
+      height: 50%;
+    }
   }
 
   &__content {
@@ -20,10 +36,47 @@
     text-align: center;
     padding-top: 100px;
     padding-left: 50px;
+    @include mq(md, max) {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-left: 0;
+      padding-top: 264px;
+    }
+
+    @include mq(sm, max) {
+      padding-top: 132px;
+    }
+
+    &--sm {
+      display: none;
+      margin: auto;
+      @include mq(md, max) {
+        display: block;
+      }
+      @include mq(sm, max) {
+        width: 145px;
+        height: 69px;
+      }
+    }
 
     & > figure {
       margin-bottom: 14px;
       margin-right: 5px;
+      @include mq(md, max) {
+        margin-bottom: 41px;
+        margin-right: 0;
+      }
+      @include mq(sm, max) {
+        margin-bottom: 20.5px;
+      }
+      & > img:first-child {
+        @include mq(md, max) {
+          display: none;
+        }
+      }
     }
 
     & > h4 {
@@ -34,6 +87,12 @@
       position: relative;
       letter-spacing: 1.5px;
       margin-left: -5px;
+      @include mq(md, max) {
+        font-size: 3rem;
+      }
+      // @include mq(sm, max) {
+      //   font-size: 1.5rem;
+      // }
 
       &::before {
         content: "";
@@ -56,11 +115,30 @@
       background-color: #25a989;
       border-radius: 27.5px;
       margin-top: 21px;
+      @include mq(md, max) {
+        width: 400px;
+        height: 70px;
+        border-radius: 35px;
+        margin-top: 30px;
+      }
+      @include mq(sm, max) {
+        width: 200px;
+        height: 35px;
+        border-radius: 20px;
+      }
       & > p {
         font-size: 2.4rem;
         color: rgb(255, 255, 255);
         line-height: 55px;
         letter-spacing: 4.5px;
+        @include mq(md, max) {
+          font-size: 3.2rem;
+          line-height: 70px;
+        }
+        @include mq(sm, max) {
+          font-size: 1.6rem;
+          line-height: 35px;
+        }
       }
     }
   }
@@ -69,9 +147,19 @@
     margin-top: 8px;
     letter-spacing: 1.5px;
     margin-right: 5px;
+    @include mq(md, max) {
+      margin-top: 0;
+      line-height: 60px;
+    }
     & > span {
       font-size: 1.6rem;
       color: #000;
+      @include mq(md, max) {
+        font-size: 3rem;
+      }
+      // @include mq(sm, max) {
+      //   font-size: 1.5rem;
+      // }
     }
 
     & > p {
@@ -79,6 +167,13 @@
       color: #000;
       letter-spacing: 3px;
       margin-top: 1px;
+      @include mq(md, max) {
+        margin-top: 0;
+        font-size: 4rem;
+      }
+      // @include mq(sm, max) {
+      //   font-size: 2rem;
+      // }
     }
   }
 }

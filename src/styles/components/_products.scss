@@ -1,6 +1,10 @@
 .p-products {
   padding-top: 100px;
   height: 688px;
+  @include mq(lg, max) {
+    height: auto;
+    padding-bottom: 100px;
+  }
   &__container {
     max-width: 1200px;
     margin: auto;
@@ -12,11 +16,25 @@
     position: relative;
   }
 
+  &__label--sm {
+    display: none;
+    @include mq(md, max) {
+      display: block;
+    }
+  }
+
   &__title {
     position: absolute;
     top: -5px;
     left: 50%;
     transform: translateX(-50%);
+    @include mq(lg, max) {
+      top: -15px;
+    }
+    @include mq(md, max) {
+      top: -115px;
+      width: 100%;
+    }
     & > h3 {
       font-size: 2rem;
       color: #000;
@@ -33,22 +51,38 @@
     }
   }
 
-  &__menu {
-  }
-
   &__list1 {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     margin: -20px;
+    @include mq(xl, max) {
+      margin: -5px;
+    }
+    @include mq(lg, max) {
+      flex-wrap: wrap;
+    }
+    @include mq(md, max) {
+      margin-top: 100px;
+    }
   }
 
   &__list2 {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     margin: 0;
     margin-left: 10px;
+    @include mq(lg, max) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list2 &__wrapItem {
+    @include mq(lg, max) {
+      width: 50%;
+    }
+    @include mq(md, max) {
+      width: 100%;
+    }
   }
 
   &__label {
@@ -59,41 +93,148 @@
 
   &__list1 &__wrapItem {
     padding: 20px;
+
     @include mq(xl, max) {
-      width: 40%;
+      padding: 5;
+    }
+    @include mq(lg, max) {
+      width: 50%;
+    }
+    @include mq(md, max) {
+      width: 100%;
     }
   }
+
   &__list1 &__Item1 {
     position: relative;
     margin-top: 52px;
     width: 172px;
-    @include mq(xl, max) {
+    @include mq(lg, max) {
       margin-top: 93px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(md, max) {
+      padding-left: 120px;
+      width: 100%;
     }
     & .p-products__info {
       transform: translateY(-35px);
       padding-left: 6px;
+      @include mq(lg, max) {
+        transform: translateY(-15px);
+        right: 35px;
+        padding-left: 0;
+      }
+      @include mq(md, max) {
+        transform: translateY(-15px);
+        right: unset;
+        left: 32%;
+        padding-left: 18px;
+      }
+    }
+    & .p-products__label {
+      @include mq(lg, max) {
+        left: 30px;
+      }
+      & > img:first-child {
+        @include mq(md, max) {
+          display: none;
+        }
+      }
+    }
+
+    & .p-products__image > img {
+      @include mq(md, max) {
+        width: 60px;
+        height: 156px;
+      }
     }
   }
   &__list2 &__Item1 {
     position: relative;
     width: 229px;
     margin-top: 95px;
+    @include mq(xl, max) {
+      width: 180px;
+    }
+    @include mq(lg, max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    & .p-products__image > img {
+      @include mq(md, max) {
+        width: 75px;
+        height: 146px;
+      }
+    }
+
     & .p-products__info {
       transform: translateY(-36px);
       right: 16px;
       padding-left: 11px;
       line-height: 26px;
+      @include mq(xl, max) {
+        width: 55%;
+        padding-left: 0;
+      }
+      @include mq(md, max) {
+        width: auto;
+        right: auto;
+        left: 75px;
+        transform: translateY(-50%);
+        padding-left: 15px;
+        line-height: 1.5;
+      }
     }
   }
   &__list1 &__Item2 {
     position: relative;
     margin-top: 93px;
     width: 226px;
+    @include mq(xl, max) {
+      width: 180px;
+    }
+    @include mq(lg, max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 20px;
+    }
     & .p-products__info {
       transform: translateY(-25px);
       padding-left: 8px;
       right: -1px;
+      @include mq(xl, max) {
+        width: 70%;
+        padding-left: 0;
+      }
+      @include mq(md, max) {
+        padding-left: 0;
+        padding-right: 15px;
+        width: fit-content;
+        right: 70px;
+        transform: translateY(-50%);
+        width: auto;
+      }
+    }
+    & .p-products__image {
+      @include mq(md, max) {
+        text-align: right;
+      }
+      & > img {
+        @include mq(md, max) {
+          width: 71px;
+          height: 171px;
+        }
+      }
     }
   }
   &__list2 &__Item2 {
@@ -101,35 +242,147 @@
     width: 237px;
     margin-top: 145px;
     padding-left: 2px;
+    @include mq(xl, max) {
+      width: 210px;
+    }
+    @include mq(lg, max) {
+      margin-left: 50px;
+      margin-top: 120px;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 120px;
+      margin-left: 0;
+    }
     & .p-products__label {
       top: -57px;
       left: 2px;
+      @include mq(md, max) {
+        top: -100px;
+        left: auto;
+        right: 70px;
+      }
+      & > img {
+        @include mq(md, max) {
+          width: 213px;
+          height: 120px;
+        }
+      }
+    }
+    & .p-products__image {
+      @include mq(md, max) {
+        text-align: right;
+      }
+      & > img {
+        @include mq(md, max) {
+          width: 218px;
+          height: 143px;
+        }
+      }
     }
     & .p-products__info {
       right: -4px;
       padding-left: 50px;
       transform: translateY(2px);
       line-height: 26px;
+      @include mq(xl, max) {
+        padding-left: 10px;
+      }
+      @include mq(lg, max) {
+        right: -30px;
+      }
+      @include mq(md, max) {
+        width: auto;
+        padding-left: 0;
+        padding-right: 60px;
+        right: 170px;
+        transform: translateY(-93%);
+        line-height: 1.5;
+      }
     }
   }
   &__list1 &__Item3 {
     position: relative;
     margin-top: 93px;
     width: 286px;
+    @include mq(xl, max) {
+      width: 220px;
+    }
+    @include mq(xl, max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 20px;
+    }
     & .p-products__info {
       transform: translateY(-25px);
       padding-left: 20px;
       right: 3px;
+      @include mq(xl, max) {
+        width: 60%;
+        padding-left: 0;
+      }
+      @include mq(md, max) {
+        width: auto;
+        left: 90px;
+        right: unset;
+        padding-left: 15px;
+      }
+    }
+
+    & .p-products__image > img {
+      @include mq(md, max) {
+        width: 90px;
+        height: 141px;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
     }
   }
   &__list2 &__Item3 {
     position: relative;
     margin-top: 117px;
     width: 226px;
+    @include mq(xl, max) {
+      width: 200px;
+    }
+    @include mq(lg, max) {
+      margin-top: 100px;
+      margin-right: 100px;
+      margin-left: auto;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 30px;
+      margin-right: 0;
+      padding-left: 10px;
+    }
     & .p-products__info {
       transform: translateY(-34px);
       left: 2px;
       padding-right: 15px;
+      @include mq(xl, max) {
+        padding-right: 0;
+        left: -10px;
+      }
+      @include mq(lg, max) {
+        right: -45px;
+        left: unset;
+        text-align: left;
+      }
+      @include mq(md, max) {
+        right: auto;
+        width: auto;
+        left: 130px;
+        padding-left: 20px;
+        transform: translateY(-38px);
+      }
     }
   }
   &__list1 &__Item4 {
@@ -137,22 +390,102 @@
     margin-top: 52px;
     width: 260px;
     @include mq(xl, max) {
-      margin-top: 83px;
+      width: 180px;
     }
+    @include mq(lg, max) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 70px;
+    }
+
+    & .p-products__image {
+      @include mq(md, max) {
+        text-align: right;
+        padding-right: 96px;
+      }
+      & > img {
+        @include mq(md, max) {
+          width: 60px;
+          height: 203px;
+        }
+      }
+    }
+
     & .p-products__info {
       transform: translateY(-14px);
       right: 1px;
+      @include mq(xl, max) {
+        width: 70%;
+        padding-left: 0;
+      }
+      @include mq(md, max) {
+        right: 155px;
+        padding-right: 15px;
+        width: auto;
+      }
+    }
+
+    & .p-products__label {
+      @include mq(md, max) {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+      }
+    }
+
+    & .p-products__label > img:first-child {
+      @include mq(md, max) {
+        display: none;
+      }
     }
   }
   &__list2 &__Item4 {
     position: relative;
     margin-top: 30px;
     width: 257px;
+    @include mq(xl, max) {
+      width: 200px;
+    }
+    @include mq(lg, max) {
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+    @include mq(md, max) {
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
+    }
+    & .p-products__image {
+      @include mq(md, max) {
+        text-align: right;
+      }
+    }
     & .p-products__info {
       left: -30px;
       padding-right: 30px;
       transform: translateY(-40px);
       line-height: 28px;
+      @include mq(xl, max) {
+        width: 35%;
+        padding-right: 0;
+      }
+      @include mq(lg, max) {
+        width: 50%;
+        right: -60px;
+        left: unset;
+        text-align: left;
+      }
+      @include mq(md, max) {
+        width: auto;
+        right: 150px;
+        transform: translateY(-50%);
+        line-height: 1.5;
+        padding-right: 30px;
+      }
     }
   }
 
@@ -165,6 +498,9 @@
 
   &__Item1 &__image {
     margin-left: 50px;
+    @include mq(lg, max) {
+      margin-left: 0px;
+    }
   }
 
   &__list2 &__Item1 &__image {
@@ -178,12 +514,15 @@
   &__Item3--reverse &__image,
   &__Item4--reverse &__image {
     text-align: right;
+    @include mq(lg, max) {
+      text-align: left;
+    }
   }
 
   &__info {
     font-size: 1.4rem;
     color: #000;
-    line-height: 21px;
+    line-height: 1.5;
     border-bottom: 2px dotted #494949;
     padding-left: 17px;
     position: absolute;
@@ -191,6 +530,15 @@
     right: 0;
     transform: translateY(-50%);
     letter-spacing: 1.2px;
+    @include mq(xl, max) {
+    }
+    @include mq(lg, max) {
+      font-size: 2.6rem;
+      letter-spacing: 2.6px;
+    }
+    @include mq(md, max) {
+      font-size: 2.6rem;
+    }
   }
 
   &__Item3--reverse &__info,
