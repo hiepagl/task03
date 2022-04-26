@@ -29,6 +29,13 @@
       padding-top: 120px;
       display: none;
     }
+    @include mq(md, max) {
+      position: absolute;
+      inset: 0;
+    }
+    @include mq(sm, max) {
+      padding-top: 60px;
+    }
     & > ul > * ~ * {
       margin-top: 16px;
       @include mq(lg, max) {
@@ -53,6 +60,10 @@
         &:first-child > a {
           border-top: none;
         }
+      }
+      @include mq(md, max) {
+        padding-left: 30px;
+        padding-right: 30px;
       }
       & > a {
         font-size: 1.6rem;
@@ -100,7 +111,9 @@
     @include mq(sm, max) {
       width: 114.5px;
       height: 97px;
-      transform: translateX(-180px);
+      transform: translateX(-90px);
+      top: -22px;
+      transition: none;
     }
   }
   &__menuMobile.is-active ~ &__leaf1 {
@@ -110,7 +123,12 @@
       left: -80px;
       transform: rotate(-105deg);
       transition: all;
-      opacity: 0.5;
+      opacity: 0.2;
+    }
+    @include mq(md, max) {
+      opacity: 0.2;
+      width: 229px;
+      height: 194px;
     }
   }
 
@@ -130,8 +148,12 @@
       height: 214px;
     }
     @include mq(sm, max) {
+      top: 500px;
       width: 105.5px;
       height: 107px;
+      bottom: -10px;
+      right: -10px;
+      transition: none;
     }
   }
   &__menuMobile.is-active ~ &__leaf2 {
@@ -142,7 +164,12 @@
       top: 600px;
       transform: rotate(-27deg);
       transition: all;
-      opacity: 0.5;
+      opacity: 0.2;
+    }
+    @include mq(md, max) {
+      opacity: 0.2;
+      width: 229px;
+      height: 194px;
     }
   }
 
@@ -152,6 +179,13 @@
       @include mq(md, max) {
         transform: translate(-180px, -50px);
       }
+      @include mq(sm, max) {
+        width: 114.5px;
+        height: 97px;
+        transform: translateX(-90px);
+        top: -22px;
+        transition: none;
+      }
     }
     .c-header__menuMobile.is-active ~ .c-header__leaf1 {
       @include mq(lg, max) {
@@ -160,11 +194,25 @@
         left: -80px;
         transform: rotate(-105deg);
         transition: all;
-        opacity: 0.5;
+        opacity: 0.2;
+      }
+      @include mq(md, max) {
+        opacity: 0.2;
+        width: 229px;
+        height: 194px;
       }
     }
     .c-header__leaf2 {
       transform: translateX(50px);
+      @include mq(sm, max) {
+        top: 500px;
+        width: 105.5px;
+        height: 107px;
+        bottom: -10px;
+        right: -10px;
+        transform: translateX(0);
+        transition: none;
+      }
     }
     .c-header__menuMobile.is-active ~ .c-header__leaf2 {
       @include mq(lg, max) {
@@ -174,7 +222,14 @@
         top: 600px;
         transform: rotate(-27deg);
         transition: all;
-        opacity: 0.5;
+        opacity: 0.2;
+      }
+      @include mq(md, max) {
+        opacity: 0.2;
+        right: -60px;
+        top: 410px;
+        width: 229px;
+        height: 194px;
       }
     }
 
@@ -193,7 +248,7 @@
       left: -80px;
       transform: rotate(-105deg);
       transition: all;
-      opacity: 0.5;
+      opacity: 0.2;
     }
   }
 
@@ -202,10 +257,10 @@
       position: absolute;
       bottom: unset;
       right: -60px;
-      top: 600px;
+      top: 410px;
       transform: rotate(-27deg);
       transition: all;
-      opacity: 0.5;
+      opacity: 0.2;
     }
   }
 
@@ -220,8 +275,16 @@
     @include mq(lg, max) {
       display: block;
     }
+    @include mq(sm, max) {
+      top: 15px;
+      left: 15px;
+    }
     & > img {
       display: none;
+      @include mq(sm, max) {
+        width: 45px;
+        height: 45px;
+      }
     }
     @include mq(lg, max) {
       & > img:first-child {

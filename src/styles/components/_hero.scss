@@ -11,6 +11,10 @@
     max-width: 1180px;
     margin: auto;
     padding: 0 30px;
+
+    @include mq(sm, max) {
+      padding: 0 15px;
+    }
   }
 
   &__wrapper {
@@ -26,8 +30,8 @@
       background-position: bottom;
     }
     @include mq(sm, max) {
-      width: 50%;
-      height: 50%;
+      height: 521.5px;
+      border-radius: 25px;
     }
   }
 
@@ -90,9 +94,9 @@
       @include mq(md, max) {
         font-size: 3rem;
       }
-      // @include mq(sm, max) {
-      //   font-size: 1.5rem;
-      // }
+      @include mq(sm, max) {
+        letter-spacing: 0.75px;
+      }
 
       &::before {
         content: "";
@@ -103,6 +107,10 @@
         top: 0;
         left: 50%;
         transform: translateX(-55%);
+        @include mq(sm, max) {
+          width: 30px;
+          height: 1px;
+        }
       }
     }
 
@@ -124,7 +132,8 @@
       @include mq(sm, max) {
         width: 200px;
         height: 35px;
-        border-radius: 20px;
+        border-radius: 17.5px;
+        margin-top: 15px;
       }
       & > p {
         font-size: 2.4rem;
@@ -136,8 +145,8 @@
           line-height: 70px;
         }
         @include mq(sm, max) {
-          font-size: 1.6rem;
           line-height: 35px;
+          letter-spacing: 2.25px;
         }
       }
     }
@@ -150,6 +159,10 @@
     @include mq(md, max) {
       margin-top: 0;
       line-height: 60px;
+    }
+    @include mq(sm, max) {
+      margin-right: 0;
+      line-height: 30px;
     }
     & > span {
       font-size: 1.6rem;

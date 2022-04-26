@@ -4,10 +4,17 @@
   @include mq(md, max) {
     padding-top: 80px;
   }
+  @include mq(sm, max) {
+    padding-top: 40px;
+    padding-bottom: 8px;
+  }
   &__container {
     max-width: 1090px;
     margin: auto;
     padding: 0 30px;
+    @include mq(sm, max) {
+      padding: 0 15px;
+    }
   }
 
   &__bg1 {
@@ -30,11 +37,19 @@
       background-size: contain;
       border-radius: 50px;
     }
+    @include mq(sm, max) {
+      height: 250px;
+      max-width: 250px;
+      border-radius: 25px;
+    }
 
     & .p-banner__content {
       @include mq(md, max) {
         top: 0;
         transform: translateY(84px);
+      }
+      @include mq(sm, max) {
+        transform: translateY(42px);
       }
     }
   }
@@ -57,6 +72,11 @@
       background-size: contain;
       border-radius: 50px;
     }
+    @include mq(sm, max) {
+      height: 250px;
+      max-width: 250px;
+      border-radius: 25px;
+    }
 
     & > figure {
       position: absolute;
@@ -68,6 +88,9 @@
         width: 411px;
         max-width: 100%;
         transform: translateX(-50%);
+      }
+      @include mq(sm, max) {
+        width: 205.5px;
       }
       & > img:nth-child(1) {
         @include mq(md, max) {
@@ -103,6 +126,10 @@
         margin-right: 0;
         letter-spacing: 2.8px;
       }
+      @include mq(sm, max) {
+        line-height: 30px;
+        letter-spacing: 1.4px;
+      }
     }
     & > h2 {
       color: #333333;
@@ -115,6 +142,9 @@
         font-size: 4rem;
         line-height: 1.5;
         letter-spacing: 4px;
+      }
+      @include mq(sm, max) {
+        letter-spacing: 2px;
       }
     }
   }

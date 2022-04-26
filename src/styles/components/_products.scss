@@ -5,21 +5,38 @@
     height: auto;
     padding-bottom: 100px;
   }
+  @include mq(sm, max) {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
   &__container {
     max-width: 1200px;
     margin: auto;
     padding: 0 40px;
+    @include mq(md, max) {
+      padding: 0 30px;
+    }
+    @include mq(sm, max) {
+      padding: 0 20px;
+    }
   }
 
   &__wrapper {
     padding: 0 20px;
     position: relative;
+    @include mq(sm, max) {
+      padding: 0 10px;
+    }
   }
 
   &__label--sm {
     display: none;
     @include mq(md, max) {
       display: block;
+    }
+    @include mq(sm, max) {
+      width: 126.5px;
+      height: 18px;
     }
   }
 
@@ -35,12 +52,19 @@
       top: -115px;
       width: 100%;
     }
-    & > h3 {
+    @include mq(sm, max) {
+      top: -57.5px;
+    }
+    & > span {
       font-size: 2rem;
       color: #000;
       text-align: center;
       letter-spacing: 2px;
       margin-right: 8px;
+      @include mq(sm, max) {
+        letter-spacing: 1px;
+        margin-right: 4px;
+      }
     }
     & > h2 {
       font-size: 4.6rem;
@@ -48,6 +72,10 @@
       color: #000;
       text-align: center;
       letter-spacing: 9px;
+      @include mq(sm, max) {
+        line-height: 25px;
+        letter-spacing: 4.5px;
+      }
     }
   }
 
@@ -64,6 +92,10 @@
     @include mq(md, max) {
       margin-top: 100px;
     }
+    @include mq(sm, max) {
+      margin-top: 50px;
+      margin: -2.5px;
+    }
   }
 
   &__list2 {
@@ -73,6 +105,9 @@
     margin-left: 10px;
     @include mq(lg, max) {
       flex-wrap: wrap;
+    }
+    @include mq(sm, max) {
+      margin-left: 5px;
     }
   }
 
@@ -89,6 +124,9 @@
     position: absolute;
     top: -52px;
     left: 0;
+    @include mq(sm, max) {
+      top: -26px;
+    }
   }
 
   &__list1 &__wrapItem {
@@ -102,6 +140,9 @@
     }
     @include mq(md, max) {
       width: 100%;
+    }
+    @include mq(sm, max) {
+      padding: 2.5px;
     }
   }
 
@@ -118,6 +159,10 @@
       padding-left: 120px;
       width: 100%;
     }
+    @include mq(sm, max) {
+      padding-left: 60px;
+      margin-top: 46.5px;
+    }
     & .p-products__info {
       transform: translateY(-35px);
       padding-left: 6px;
@@ -132,10 +177,17 @@
         left: 32%;
         padding-left: 18px;
       }
+      @include mq(sm, max) {
+        transform: translateY(-7.5px);
+        padding-left: 9px;
+      }
     }
     & .p-products__label {
       @include mq(lg, max) {
         left: 30px;
+      }
+      @include mq(sm, max) {
+        left: 15px;
       }
       & > img:first-child {
         @include mq(md, max) {
@@ -148,6 +200,10 @@
       @include mq(md, max) {
         width: 60px;
         height: 156px;
+      }
+      @include mq(sm, max) {
+        width: 30px;
+        height: 78px;
       }
     }
   }
@@ -166,11 +222,18 @@
       width: 100%;
       margin-top: 30px;
     }
+    @include mq(md, max) {
+      margin-top: 15px;
+    }
 
     & .p-products__image > img {
       @include mq(md, max) {
         width: 75px;
         height: 146px;
+      }
+      @include mq(sm, max) {
+        width: 37.5px;
+        height: 73px;
       }
     }
 
@@ -191,6 +254,10 @@
         padding-left: 15px;
         line-height: 1.5;
       }
+      @include mq(sm, max) {
+        left: 37.5px;
+        padding-left: 7.5px;
+      }
     }
   }
   &__list1 &__Item2 {
@@ -208,6 +275,9 @@
       width: 100%;
       margin-top: 20px;
     }
+    @include mq(sm, max) {
+      margin-top: 10px;
+    }
     & .p-products__info {
       transform: translateY(-25px);
       padding-left: 8px;
@@ -224,6 +294,11 @@
         transform: translateY(-50%);
         width: auto;
       }
+      @include mq(sm, max) {
+        padding-right: 7.5px;
+        right: 35px;
+        width: auto;
+      }
     }
     & .p-products__image {
       @include mq(md, max) {
@@ -233,6 +308,10 @@
         @include mq(md, max) {
           width: 71px;
           height: 171px;
+        }
+        @include mq(sm, max) {
+          width: 35.5px;
+          height: 85.5px;
         }
       }
     }
@@ -254,6 +333,10 @@
       margin-top: 120px;
       margin-left: 0;
     }
+    @include mq(sm, max) {
+      margin-top: 60px;
+      padding-left: 1px;
+    }
     & .p-products__label {
       top: -57px;
       left: 2px;
@@ -262,10 +345,18 @@
         left: auto;
         right: 70px;
       }
+      @include mq(sm, max) {
+        top: -50px;
+        right: 35px;
+      }
       & > img {
         @include mq(md, max) {
           width: 213px;
           height: 120px;
+        }
+        @include mq(sm, max) {
+          width: 106.5px;
+          height: 60px;
         }
       }
     }
@@ -277,6 +368,10 @@
         @include mq(md, max) {
           width: 218px;
           height: 143px;
+        }
+        @include mq(sm, max) {
+          width: 109px;
+          height: 71.5px;
         }
       }
     }
@@ -299,6 +394,10 @@
         transform: translateY(-93%);
         line-height: 1.5;
       }
+      @include mq(sm, max) {
+        padding-right: 30px;
+        right: 85px;
+      }
     }
   }
   &__list1 &__Item3 {
@@ -316,6 +415,9 @@
       width: 100%;
       margin-top: 20px;
     }
+    @include mq(sm, max) {
+      margin-top: 10px;
+    }
     & .p-products__info {
       transform: translateY(-25px);
       padding-left: 20px;
@@ -330,6 +432,12 @@
         right: unset;
         padding-left: 15px;
       }
+      @include mq(sm, max) {
+        transform: translateY(-12.5px);
+        left: 45px;
+        right: auto;
+        padding-left: 7.5px;
+      }
     }
 
     & .p-products__image > img {
@@ -342,6 +450,10 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+      }
+      @include mq(sm, max) {
+        width: 45px;
+        height: 70.5px;
       }
     }
   }
@@ -363,6 +475,16 @@
       margin-right: 0;
       padding-left: 10px;
     }
+    @include mq(sm, max) {
+      margin-top: 15px;
+      padding-left: 5px;
+    }
+    & .p-products__image > img {
+      @include mq(sm, max) {
+        width: 63.5px;
+        height: 54px;
+      }
+    }
     & .p-products__info {
       transform: translateY(-34px);
       left: 2px;
@@ -383,6 +505,11 @@
         padding-left: 20px;
         transform: translateY(-38px);
       }
+      @include mq(sm, max) {
+        left: 65px;
+        padding-left: 10px;
+        transform: translateY(-19px);
+      }
     }
   }
   &__list1 &__Item4 {
@@ -401,16 +528,25 @@
       width: 100%;
       margin-top: 70px;
     }
-
+    @include mq(sm, max) {
+      margin-top: 35px;
+    }
     & .p-products__image {
       @include mq(md, max) {
         text-align: right;
         padding-right: 96px;
       }
+      @include mq(sm, max) {
+        padding-right: 48px;
+      }
       & > img {
         @include mq(md, max) {
           width: 60px;
           height: 203px;
+        }
+        @include mq(sm, max) {
+          width: 30px;
+          height: 101.5px;
         }
       }
     }
@@ -427,6 +563,11 @@
         padding-right: 15px;
         width: auto;
       }
+      @include mq(sm, max) {
+        transform: translateY(-7px);
+        right: 77.5px;
+        padding-right: 7.5px;
+      }
     }
 
     & .p-products__label {
@@ -434,6 +575,9 @@
         left: auto;
         right: 0;
         transform: translateX(0);
+      }
+      @include mq(sm, max) {
+        top: -26px;
       }
     }
 
@@ -459,9 +603,18 @@
       margin-top: 30px;
       margin-left: 0;
     }
+    @include mq(sm, max) {
+      margin-top: 15px;
+    }
     & .p-products__image {
       @include mq(md, max) {
         text-align: right;
+      }
+      & > img {
+        @include mq(sm, max) {
+          width: 81px;
+          height: 57.5px;
+        }
       }
     }
     & .p-products__info {
@@ -485,6 +638,10 @@
         transform: translateY(-50%);
         line-height: 1.5;
         padding-right: 30px;
+      }
+      @include mq(sm, max) {
+        right: 75px;
+        padding-right: 15px;
       }
     }
   }
@@ -538,6 +695,12 @@
     }
     @include mq(md, max) {
       font-size: 2.6rem;
+    }
+    @include mq(sm, max) {
+      padding-left: 8.5px;
+      letter-spacing: 1.3px;
+      transform: translateY(-50%);
+      border-bottom: 1px dotted #494949;
     }
   }
 

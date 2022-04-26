@@ -1,7 +1,9 @@
 let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
-var header = $(".c-header");
-var menuMobile = $("#menuMobile");
+let header = $(".c-header");
+let menuMobile = $("#menuMobile");
+let introContents = $$(".p-intro__content > dd");
+let showInfos = $$(".p-intro__showInfo");
 
 window.onscroll = function () {
   handleScrollTopHeader();
@@ -23,3 +25,9 @@ function handleScrollTopHeader() {
 menuMobile.onclick = function () {
   menuMobile.classList.toggle("is-active");
 };
+
+for (let i = 0; i < showInfos.length; i++) {
+  showInfos[i].onclick = function () {
+    introContents[i].classList.toggle("is-show");
+  };
+}

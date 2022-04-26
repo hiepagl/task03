@@ -1,5 +1,6 @@
 <% const basePath='.' ; const title='Task03 - HOME' ; const description='' ;
 const keyword='' ; %>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <%- include('partials/_head', { basePath, title, description, keyword }); %>
@@ -43,7 +44,7 @@ const keyword='' ; %>
           <div class="p-products__container">
             <div class="p-products__wrapper">
               <div class="p-products__title">
-                <h3>使い方いろいろ</h3>
+                <span>使い方いろいろ</span>
                 <h2>毎日にハッカ油</h2>
               </div>
               <div class="p-products__menu">
@@ -211,12 +212,12 @@ const keyword='' ; %>
                         hidden
                         checked
                       />
-                      <label for="p-point__Item1" class="p-point__info">
-                        <h3>部屋干しも安心</h3>
+                      <div class="p-point__info">
+                        <h3>部屋干しも安心</span>
                         <p>
                           湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍&ensp;優しい自然な香りですっきりさわやか。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -224,25 +225,25 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item1" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item2">
                       <input id="p-point__Item2" type="checkbox" hidden />
-                      <label for="p-point__Item2" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>気分転換に</h3>
                         <p>
                           集中力が低下してきたときはハッカ油でリフレッシュ。気分もすっきり眠気覚ましに最適です。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -250,25 +251,25 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item2" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item3">
                       <input id="p-point__Item3" type="checkbox" hidden />
-                      <label for="p-point__Item3" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>外出のお供に</h3>
                         <p>
                           遠足やピクニックで思いっきり遊んでも、ハッカ油のおしぼりをサッと取り出していつでも清潔。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -276,14 +277,14 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item3" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -315,12 +316,12 @@ const keyword='' ; %>
                         hidden
                         checked
                       />
-                      <label for="p-point__Item4" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>スッと冷却</h3>
                         <p>
                           暑くて体に熱がこもりがちな暑い季節はハッカ油でクールダウン。心地の良い涼しさを味わえます。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -328,25 +329,25 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item4" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item5">
                       <input id="p-point__Item5" type="checkbox" hidden />
-                      <label for="p-point__Item5" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>花粉の季節に</h3>
                         <p>
                           ハッカマスクでブルーな気分も吹き飛ばしてくれます。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -354,25 +355,25 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item5" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item6">
                       <input id="p-point__Item6" type="checkbox" hidden />
-                      <label for="p-point__Item6" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>足湯に</h3>
                         <p>
                           ひんやり爽快。ハッカ油で寝苦しい夜もすっきり。さわやかな香りで気分もリフレッシュ。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -380,14 +381,14 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item6" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -421,12 +422,12 @@ const keyword='' ; %>
                         hidden
                         checked
                       />
-                      <label for="p-point__Item7" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>嫌な害虫を撃退</h3>
                         <p>
                           キッチンなどに現れる嫌な害虫はハッカ油がシャットアウト！清涼感あふれる香りでお部屋を守ります。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -434,25 +435,25 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item7" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item8">
                       <input id="p-point__Item8" type="checkbox" hidden />
-                      <label for="p-point__Item8" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>窓ガラスに</h3>
                         <p>
                           自然素材のハッカ油で手肌にも優しくハウスキーピング。手軽に作れるガラスクリーナーでピカピカに。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -460,26 +461,26 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item8" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                   <div class="p-point__wrapItem">
                     <div class="p-point__Item p-point__Item9">
                       <input id="p-point__Item9" type="checkbox" hidden />
-                      <label for="p-point__Item9" class="p-point__info">
+                      <div class="p-point__info">
                         <h3>シューピローに</h3>
                         <p>
                           お部屋の悪臭にはハッカ油が迎え撃ち！
                           嫌な匂いがこもりがちな靴にハッカ油のシューピローを。
                         </p>
-                        <button class="p-point__label">
+                        <div class="p-point__label">
                           <figure>
                             <img
                               src="./assets/images/point/pointLabel.png"
@@ -487,14 +488,14 @@ const keyword='' ; %>
                             />
                           </figure>
                           <span>ハッカ油コラムへ</span>
-                        </button>
-                      </label>
-                      <label for="p-point__Item9" class="p-point__btnMore">
+                        </div>
+                      </div>
+                      <div class="p-point__btnMore">
                         <img
                           src="./assets/images/point/btn_more.png"
                           alt="btn_more"
                         />
-                      </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -586,7 +587,7 @@ const keyword='' ; %>
                   <figure>
                     <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                   </figure>
-                  <h3>虫除け対策に直接体や環境に噴きかけても良いですか？</h3>
+                  <p>虫除け対策に直接体や環境に噴きかけても良いですか？</p>
                 </dt>
                 <dd>
                   刺激が強過ぎる可能性がありますので、薄めて使用してください。また素材によっては変質(変色)するおそれがありますので注意してください。
@@ -597,7 +598,7 @@ const keyword='' ; %>
                   <figure>
                     <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                   </figure>
-                  <h3>体に使用する際の注意点は？</h3>
+                  <p>体に使用する際の注意点は？</p>
                 </dt>
                 <dd>
                   刺激作用があるため、目や目の周囲、粘膜等に付着しないように注意してください。
@@ -608,9 +609,9 @@ const keyword='' ; %>
                   <figure>
                     <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                   </figure>
-                  <h3>
+                  <p>
                     ハッカ油アイテムを作る際に使用する量は紹介されている量を守らないといけませんか？
-                  </h3>
+                  </p>
                 </dt>
                 <dd>
                   紹介している量はあくまでも目安になります。ただし、これ以上の量を加えると刺激が強過ぎる可能性があるので注意してください。
@@ -621,7 +622,7 @@ const keyword='' ; %>
                   <figure>
                     <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                   </figure>
-                  <h3>使用期限はどのくらいですか？</h3>
+                  <p>使用期限はどのくらいですか？</p>
                 </dt>
                 <dd>
                   パッケージ裏面に賞味期限を記載しています。遮光して、涼しい所に保管してください。
@@ -632,7 +633,7 @@ const keyword='' ; %>
                   <figure>
                     <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                   </figure>
-                  <h3>ハッカ油は何からできたものですか？</h3>
+                  <p>ハッカ油は何からできたものですか？</p>
                 </dt>
                 <dd>
                   ハッカ油とはハッカソウというミントを乾燥させて抽出した植物油のことです。
@@ -667,11 +668,11 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>風邪をひきやすい冬も安心</h3>
+                    <span>風邪をひきやすい冬も安心</span>
                     <h2>風邪やインフルエンザシーズンにもハッカ油</h2>
                   </div>
                 </dt>
-                <dd>
+                <dd class="is-show">
                   風邪をひきやすくなる冬、朝起きたら喉がガラガラなんていうことはありませんか？&ensp;実はこれ、夜寝ている間にウイルスが体内で増殖してしまった証拠かもしれません。寒さと乾燥の厳しい冬の風邪は、夜寝ている間に悪化しやすいといわれています。そんな季節に役立つハッカ油の使い方をご紹介します。
                   <figure>
                     <img
@@ -679,7 +680,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -690,7 +706,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>万能だからこそ知っておこう</h3>
+                    <span>万能だからこそ知っておこう</span>
                     <h2>ハッカ油を安全に使うためのルール</h2>
                   </div>
                 </dt>
@@ -702,7 +718,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -713,7 +744,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>涼しいオアシスタイム</h3>
+                    <span>涼しいオアシスタイム</span>
                     <h2>ハッカ油の冷却パワーを上手に使おう</h2>
                   </div>
                 </dt>
@@ -725,7 +756,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -736,7 +782,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>気分転換の強い味方</h3>
+                    <span>気分転換の強い味方</span>
                     <h2>ハッカ油でリラックス&リフレッシュ</h2>
                   </div>
                 </dt>
@@ -748,7 +794,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -759,7 +820,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>嫌な匂いはサヨウナラ、ブーツや靴などに</h3>
+                    <span>嫌な匂いはサヨウナラ、ブーツや靴などに</span>
                     <h2>ハッカ油の消臭マジック！</h2>
                   </div>
                 </dt>
@@ -771,7 +832,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -782,7 +858,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>香りと抗菌のダブルパワー</h3>
+                    <span>香りと抗菌のダブルパワー</span>
                     <h2>衣類がハッカ油でよみがえる！？</h2>
                   </div>
                 </dt>
@@ -794,7 +870,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -805,7 +896,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>いつでもどこでもサッと使える</h3>
+                    <span>いつでもどこでもサッと使える</span>
                     <h2>ハッカ油スプレーで携帯ハッカ油を始めよう</h2>
                   </div>
                 </dt>
@@ -817,7 +908,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -828,7 +934,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>使わないなんてもったいない</h3>
+                    <span>使わないなんてもったいない</span>
                     <h2>ハッカ油は万能ハウスクリーナー</h2>
                   </div>
                 </dt>
@@ -841,7 +947,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -852,7 +973,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>おうちでサロン気分</h3>
+                    <span>おうちでサロン気分</span>
                     <h2>ハッカ油で楽しいバスタイム</h2>
                   </div>
                 </dt>
@@ -865,7 +986,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -876,7 +1012,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>マスクにシュッシュと一噴き</h3>
+                    <span>マスクにシュッシュと一噴き</span>
                     <h2>ハッカ油で上手に生活管理！</h2>
                   </div>
                 </dt>
@@ -888,7 +1024,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
               <dl class="p-intro__content">
                 <dt>
@@ -899,7 +1050,7 @@ const keyword='' ; %>
                     />
                   </figure>
                   <div class="p-intro__title">
-                    <h3>害虫も怖くない</h3>
+                    <span>害虫も怖くない</span>
                     <h2>さわやかハッカ油で虫除け対策！</h2>
                   </div>
                 </dt>
@@ -911,7 +1062,22 @@ const keyword='' ; %>
                       alt="arrow"
                     />
                   </figure>
+                  <a href="#">詳しく見る</a>
                 </dd>
+                <div class="p-intro__showInfo">
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_up.png"
+                      alt="arrow_up"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      src="./assets/images/intro/arrow_down.png"
+                      alt="arrow_down"
+                    />
+                  </figure>
+                </div>
               </dl>
             </div>
           </div>

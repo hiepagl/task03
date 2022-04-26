@@ -104,3 +104,9 @@ img {
     font-size: 62.5%;
   }
 }
+
+@include mq(sm, max) {
+  html {
+    font-size: 31.25%;
+  }
+}

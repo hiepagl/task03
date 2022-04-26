@@ -11,6 +11,10 @@
       padding: 0 30px;
       padding-top: 80px;
     }
+    @include mq(sm, max) {
+      padding: 0 15px;
+      padding-top: 40px;
+    }
 
     & > h2 {
       color: #176b6a;
@@ -22,13 +26,22 @@
       @include mq(md, max) {
         font-size: 4rem;
       }
+      @include mq(sm, max) {
+        letter-spacing: 2px;
+      }
     }
   }
 
   &__content {
     margin-top: 44px;
+    @include mq(sm, max) {
+      margin-top: 22px;
+    }
     &:nth-child(2) {
       margin-top: 52px;
+      @include mq(sm, max) {
+        margin-top: 26px;
+      }
     }
     & > dd {
       margin-top: 8px;
@@ -40,6 +53,9 @@
         font-size: 2.6rem;
         line-height: 1.7;
         letter-spacing: 2.6px;
+      }
+      @include mq(sm, max) {
+        letter-spacing: 1.3px;
       }
     }
   }
@@ -56,14 +72,23 @@
         height: 74px;
         margin-right: 20px;
       }
+      @include mq(sm, max) {
+        min-width: 40px;
+        height: 37px;
+        margin-right: 10px;
+      }
       & > img {
         @include mq(md, max) {
           width: 80px;
           height: 74px;
         }
+        @include mq(sm, max) {
+          width: 40px;
+          height: 37px;
+        }
       }
     }
-    & > h3 {
+    & > p {
       color: #176b6a;
       font-size: 1.4rem;
       line-height: 55px;
@@ -73,6 +98,9 @@
         font-size: 2.6rem;
         line-height: 1.7;
         letter-spacing: 2.6px;
+      }
+      @include mq(md, max) {
+        letter-spacing: 1.3px;
       }
     }
   }
