@@ -23,14 +23,13 @@
     left: -2px;
     pointer-events: all;
     @include mq(lg, max) {
-      position: absolute;
+      position: fixed;
       background-color: #1f4242;
       height: 100%;
       padding-top: 120px;
       display: none;
     }
     @include mq(md, max) {
-      position: absolute;
       inset: 0;
     }
     @include mq(sm, max) {
@@ -121,7 +120,7 @@
   }
   &__menuMobile.is-active ~ &__leaf1 {
     @include mq(lg, max) {
-      position: absolute;
+      position: fixed;
       top: -80px;
       left: -80px;
       transform: rotate(-105deg);
@@ -162,7 +161,7 @@
   }
   &__menuMobile.is-active ~ &__leaf2 {
     @include mq(lg, max) {
-      position: absolute;
+      position: fixed;
       bottom: unset;
       right: -60px;
       top: 600px;
@@ -280,7 +279,7 @@
 
   &__menuMobile {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: 30px;
     z-index: 10;
