@@ -1,7 +1,7 @@
 .l-footer {
   text-align: center;
-  padding-top: 97px;
-  padding-bottom: 65px;
+  padding-top: 90px;
+  padding-bottom: 61px;
   @include mq(sm, max) {
     padding-top: 48.5px;
     padding-bottom: 32.5px;
@@ -54,7 +54,7 @@
       margin-top: 25px;
     }
     & > figure {
-      margin-top: 7px;
+      margin-top: 13px;
       @include mq(md, max) {
         margin-top: 0;
       }
@@ -74,7 +74,7 @@
       font-size: 1.2rem;
       letter-spacing: 1.2px;
       line-height: 24px;
-      padding-top: 5px;
+      // padding-top: 5px;
       @include mq(md, max) {
         font-size: 2rem;
         line-height: 1.2;

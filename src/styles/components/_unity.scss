@@ -1,13 +1,22 @@
-.u-blue{
-    color: #1f53fa;
-    text-decoration: underline;
+.u-blue {
+  color: #1f53fa;
+  text-decoration: underline;
 }
-.u-text-center{
-    text-align: center;
+.u-text-center {
+  text-align: center;
 }
-.u-d-flex{
-    display: flex;
-    &--align-center{
-        align-items: center;
-    }
+.u-d-flex {
+  display: flex;
+  &--align-center {
+    align-items: center;
+  }
+}
+
+@media only screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .c-header__nav > ul > li > a {
+    padding-top: 1.5px;
+  }
+  .p-hero__content > a > p {
+    padding-top: 9px;
+  }
 }

@@ -23,7 +23,7 @@
     left: -2px;
     pointer-events: all;
     @include mq(lg, max) {
-      position: relative;
+      position: absolute;
       background-color: #1f4242;
       height: 100%;
       padding-top: 120px;
@@ -103,6 +103,9 @@
     left: 50%;
     transform: translateX(-273px);
     transition: all 0.7s ease-in-out;
+    @include mq(lg, max) {
+      transition: none;
+    }
     @include mq(md, max) {
       width: 229px;
       height: 194px;
@@ -134,13 +137,14 @@
 
   &__leaf2 {
     position: absolute;
-    bottom: -20px;
+    bottom: -27px;
     right: -32px;
     transition: all 0.7s ease-in-out;
     @include mq(lg, max) {
       bottom: unset;
       top: 500px;
       right: -80px;
+      transition: none;
     }
     @include mq(md, max) {
       top: 1000px;
@@ -224,6 +228,7 @@
         transition: all;
         opacity: 0.2;
       }
+
       @include mq(md, max) {
         opacity: 0.2;
         right: -60px;
@@ -254,6 +259,15 @@
 
   &__menuMobile.is-active ~ &__leaf2 {
     @include mq(lg, max) {
+      position: absolute;
+      bottom: unset;
+      right: -60px;
+      top: 600px;
+      transform: rotate(-27deg);
+      transition: all;
+      opacity: 0.2;
+    }
+    @include mq(md, max) {
       position: absolute;
       bottom: unset;
       right: -60px;

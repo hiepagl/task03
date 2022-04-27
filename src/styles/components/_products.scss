@@ -168,12 +168,12 @@
       padding-left: 6px;
       @include mq(lg, max) {
         transform: translateY(-15px);
-        right: 35px;
+        right: 28px;
         padding-left: 0;
       }
       @include mq(md, max) {
         transform: translateY(-15px);
-        right: unset;
+        right: auto;
         left: 32%;
         padding-left: 18px;
       }
@@ -210,7 +210,7 @@
   &__list2 &__Item1 {
     position: relative;
     width: 229px;
-    margin-top: 95px;
+    margin-top: 85px;
     @include mq(xl, max) {
       width: 180px;
     }
@@ -246,6 +246,7 @@
         width: 55%;
         padding-left: 0;
       }
+
       @include mq(md, max) {
         width: auto;
         right: auto;
@@ -286,10 +287,17 @@
         width: 70%;
         padding-left: 0;
       }
+      @include mq(lg, max) {
+        width: auto;
+        padding-left: 0;
+        right: auto;
+        left: 60px;
+      }
       @include mq(md, max) {
         padding-left: 0;
         padding-right: 15px;
         width: fit-content;
+        left: auto;
         right: 70px;
         transform: translateY(-50%);
         width: auto;
@@ -319,7 +327,7 @@
   &__list2 &__Item2 {
     position: relative;
     width: 237px;
-    margin-top: 145px;
+    margin-top: 137px;
     padding-left: 2px;
     @include mq(xl, max) {
       width: 210px;
@@ -429,7 +437,7 @@
       @include mq(md, max) {
         width: auto;
         left: 90px;
-        right: unset;
+        right: auto;
         padding-left: 15px;
       }
       @include mq(sm, max) {
@@ -459,7 +467,7 @@
   }
   &__list2 &__Item3 {
     position: relative;
-    margin-top: 117px;
+    margin-top: 108px;
     width: 226px;
     @include mq(xl, max) {
       width: 200px;
@@ -495,7 +503,7 @@
       }
       @include mq(lg, max) {
         right: -45px;
-        left: unset;
+        left: auto;
         text-align: left;
       }
       @include mq(md, max) {
@@ -589,7 +597,7 @@
   }
   &__list2 &__Item4 {
     position: relative;
-    margin-top: 30px;
+    margin-top: 21px;
     width: 257px;
     @include mq(xl, max) {
       width: 200px;
@@ -629,7 +637,7 @@
       @include mq(lg, max) {
         width: 50%;
         right: -60px;
-        left: unset;
+        left: auto;
         text-align: left;
       }
       @include mq(md, max) {
@@ -711,7 +719,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    right: unset;
+    right: auto;
     transform: translateY(-50%);
   }
 }

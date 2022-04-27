@@ -72,6 +72,7 @@
       position: relative;
       width: auto;
       text-align: center;
+      display: flex;
       & > img {
         @include mq(md, max) {
           width: 85px;
@@ -198,10 +199,16 @@
   &__wrapItem {
     width: 33.33%;
     padding: 10px;
+
+    @include mq(lg, max) {
+      width: 50%;
+    }
+
     @include mq(md, max) {
       width: 100%;
       padding: 15px;
     }
+
     @include mq(sm, max) {
       padding: 7.5px;
     }
@@ -223,12 +230,6 @@
   @for $i from 1 through 9 {
     &__Item#{$i} {
       background-image: url("../images/point/item#{$i}.png");
-    }
-
-    #p-point__Item#{$i}:checked {
-      & + .p-point__info {
-        display: flex;
-      }
     }
   }
 
@@ -327,6 +328,15 @@
     @include mq(sm, max) {
       margin-top: 20px;
     }
+    & > figure {
+      height: 40px;
+      @include mq(md, max) {
+        height: 53px;
+      }
+      @include mq(sm, max) {
+        height: 26.5px;
+      }
+    }
     & > figure > img {
       @include mq(md, max) {
         width: 263px;
@@ -362,6 +372,7 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+    display: flex;
     cursor: pointer;
     @include mq(md, max) {
       right: 30px;
@@ -384,6 +395,10 @@
     &:hover {
       opacity: 0.7;
     }
+  }
+
+  &__wrapItem.active &__Item &__info {
+    display: flex;
   }
 
   &__partner {
@@ -480,6 +495,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   &__partnerArrow {
     position: absolute;

@@ -27,11 +27,11 @@
       margin-top: 17.5px;
       padding-bottom: 15.5px;
     }
-    & > dt {
+    & .p-intro__heading {
       display: flex;
     }
 
-    & > dd {
+    & > .p-intro__info {
       position: relative;
       margin-top: 20px;
       padding-right: 43px;
