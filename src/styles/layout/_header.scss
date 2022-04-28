@@ -22,6 +22,7 @@
     top: 66px;
     left: -2px;
     pointer-events: all;
+    overflow-y: auto;
     @include mq(lg, max) {
       position: fixed;
       background-color: #1f4242;
