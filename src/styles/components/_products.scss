@@ -5,7 +5,11 @@
     height: auto;
     padding-bottom: 100px;
   }
-  @include mq(sm, max) {
+  @include mq(md, max) {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  @include mq(md, max) {
     padding-bottom: 50px;
     padding-top: 50px;
   }
@@ -14,17 +18,21 @@
     margin: auto;
     padding: 0 40px;
     @include mq(md, max) {
-      padding: 0 30px;
+      padding: 0 15px;
+      max-width: 345px;
     }
-    @include mq(sm, max) {
-      padding: 0 20px;
+    @include mq(md, max) {
+      padding: 0 15px;
     }
   }
 
   &__wrapper {
     padding: 0 20px;
     position: relative;
-    @include mq(sm, max) {
+    @include mq(md, max) {
+      padding: 0 10px;
+    }
+    @include mq(md, max) {
       padding: 0 10px;
     }
   }
@@ -33,8 +41,10 @@
     display: none;
     @include mq(md, max) {
       display: block;
+      width: 126.5px;
+      height: 18px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       width: 126.5px;
       height: 18px;
     }
@@ -47,12 +57,13 @@
     transform: translateX(-50%);
     @include mq(lg, max) {
       top: -15px;
-    }
-    @include mq(md, max) {
-      top: -115px;
       width: 100%;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
+      top: -57.5px;
+      width: 100%;
+    }
+    @include mq(md, max) {
       top: -57.5px;
     }
     & > span {
@@ -61,7 +72,11 @@
       text-align: center;
       letter-spacing: 2px;
       margin-right: 8px;
-      @include mq(sm, max) {
+      @include mq(md, max) {
+        letter-spacing: 1px;
+        margin-right: 4px;
+      }
+      @include mq(md, max) {
         letter-spacing: 1px;
         margin-right: 4px;
       }
@@ -72,7 +87,11 @@
       color: #000;
       text-align: center;
       letter-spacing: 9px;
-      @include mq(sm, max) {
+      @include mq(md, max) {
+        line-height: 25px;
+        letter-spacing: 4.5px;
+      }
+      @include mq(md, max) {
         line-height: 25px;
         letter-spacing: 4.5px;
       }
@@ -90,11 +109,12 @@
       flex-wrap: wrap;
     }
     @include mq(md, max) {
-      margin-top: 100px;
-    }
-    @include mq(sm, max) {
-      margin-top: 50px;
       margin: -2.5px;
+      margin-top: 50px;
+    }
+    @include mq(md, max) {
+      margin: -2.5px;
+      margin-top: 50px;
     }
   }
 
@@ -106,7 +126,10 @@
     @include mq(lg, max) {
       flex-wrap: wrap;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
+      margin-left: 5px;
+    }
+    @include mq(md, max) {
       margin-left: 5px;
     }
   }
@@ -124,7 +147,10 @@
     position: absolute;
     top: -52px;
     left: 0;
-    @include mq(sm, max) {
+    @include mq(md, max) {
+      top: -26px;
+    }
+    @include mq(md, max) {
       top: -26px;
     }
   }
@@ -140,8 +166,9 @@
     }
     @include mq(md, max) {
       width: 100%;
+      padding: 2.5px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 2.5px;
     }
   }
@@ -156,10 +183,11 @@
       margin-right: auto;
     }
     @include mq(md, max) {
-      padding-left: 120px;
+      padding-left: 60px;
+      margin-top: 46.5px;
       width: 100%;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding-left: 60px;
       margin-top: 46.5px;
     }
@@ -168,16 +196,16 @@
       padding-left: 6px;
       @include mq(lg, max) {
         transform: translateY(-15px);
-        right: 28px;
+        right: 50px;
         padding-left: 0;
       }
       @include mq(md, max) {
-        transform: translateY(-15px);
+        transform: translateY(-7.5px);
         right: auto;
-        left: 180px;
-        padding-left: 18px;
+        left: 90px;
+        padding-left: 9px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         transform: translateY(-7.5px);
         left: 90px;
         padding-left: 9px;
@@ -185,9 +213,12 @@
     }
     & .p-products__label {
       @include mq(lg, max) {
-        left: 30px;
+        left: -50px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
+        left: 15px;
+      }
+      @include mq(md, max) {
         left: 15px;
       }
       & > img:first-child {
@@ -199,10 +230,10 @@
 
     & .p-products__image > img {
       @include mq(md, max) {
-        width: 60px;
-        height: 156px;
+        width: 30px;
+        height: 78px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 30px;
         height: 78px;
       }
@@ -221,7 +252,7 @@
     }
     @include mq(md, max) {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 15px;
     }
     @include mq(md, max) {
       margin-top: 15px;
@@ -229,10 +260,10 @@
 
     & .p-products__image > img {
       @include mq(md, max) {
-        width: 75px;
-        height: 146px;
+        width: 37.5px;
+        height: 73px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 37.5px;
         height: 73px;
       }
@@ -247,16 +278,15 @@
         width: 55%;
         padding-left: 0;
       }
-
       @include mq(md, max) {
         width: auto;
         right: auto;
-        left: 75px;
+        left: 37.5px;
         transform: translateY(-50%);
-        padding-left: 15px;
+        padding-left: 7.5px;
         line-height: 1.5;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         left: 37.5px;
         padding-left: 7.5px;
       }
@@ -275,9 +305,9 @@
     }
     @include mq(md, max) {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 10px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 10px;
     }
     & .p-products__info {
@@ -296,14 +326,14 @@
       }
       @include mq(md, max) {
         padding-left: 0;
-        padding-right: 15px;
+        padding-right: 7.5px;
         width: fit-content;
         left: auto;
-        right: 70px;
+        right: 35px;
         transform: translateY(-50%);
         width: auto;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         padding-right: 7.5px;
         right: 35px;
         width: auto;
@@ -315,10 +345,10 @@
       }
       & > img {
         @include mq(md, max) {
-          width: 71px;
-          height: 171px;
+          width: 35.5px;
+          height: 85.5px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 35.5px;
           height: 85.5px;
         }
@@ -339,10 +369,11 @@
     }
     @include mq(md, max) {
       width: 100%;
-      margin-top: 120px;
+      margin-top: 60px;
       margin-left: 0;
+      padding-left: 1px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 60px;
       padding-left: 1px;
     }
@@ -350,20 +381,20 @@
       top: -57px;
       left: 2px;
       @include mq(md, max) {
-        top: -100px;
+        top: -50px;
         left: auto;
-        right: 70px;
+        right: 35px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         top: -50px;
         right: 35px;
       }
       & > img {
         @include mq(md, max) {
-          width: 213px;
-          height: 120px;
+          width: 106.5px;
+          height: 60px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 106.5px;
           height: 60px;
         }
@@ -375,10 +406,10 @@
       }
       & > img {
         @include mq(md, max) {
-          width: 218px;
-          height: 143px;
+          width: 109px;
+          height: 71.5px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 109px;
           height: 71.5px;
         }
@@ -393,7 +424,7 @@
         padding-left: 10px;
       }
       @include mq(lg, max) {
-        right: -30px;
+        right: -10px;
       }
       @include mq(md, max) {
         width: auto;
@@ -403,7 +434,7 @@
         transform: translateY(-93%);
         line-height: 1.5;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         padding-right: 30px;
         right: 85px;
       }
@@ -424,7 +455,7 @@
       width: 100%;
       margin-top: 20px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 10px;
     }
     & .p-products__info {
@@ -441,7 +472,7 @@
         right: auto;
         padding-left: 15px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         transform: translateY(-12.5px);
         left: 45px;
         right: auto;
@@ -460,7 +491,7 @@
         filter: FlipH;
         -ms-filter: "FlipH";
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 45px;
         height: 70.5px;
       }
@@ -484,12 +515,12 @@
       margin-right: 0;
       padding-left: 10px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 15px;
       padding-left: 5px;
     }
     & .p-products__image > img {
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 63.5px;
         height: 54px;
       }
@@ -503,7 +534,7 @@
         left: -10px;
       }
       @include mq(lg, max) {
-        right: -45px;
+        right: -17px;
         left: auto;
         text-align: left;
       }
@@ -514,7 +545,7 @@
         padding-left: 20px;
         transform: translateY(-38px);
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         left: 65px;
         padding-left: 10px;
         transform: translateY(-19px);
@@ -537,7 +568,7 @@
       width: 100%;
       margin-top: 70px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 35px;
     }
     & .p-products__image {
@@ -545,7 +576,7 @@
         text-align: right;
         padding-right: 96px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         padding-right: 48px;
       }
       & > img {
@@ -553,7 +584,7 @@
           width: 60px;
           height: 203px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 30px;
           height: 101.5px;
         }
@@ -572,7 +603,7 @@
         padding-right: 15px;
         width: auto;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         transform: translateY(-7px);
         right: 77.5px;
         padding-right: 7.5px;
@@ -585,7 +616,7 @@
         right: 0;
         transform: translateX(0);
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         top: -26px;
       }
     }
@@ -612,7 +643,7 @@
       margin-top: 30px;
       margin-left: 0;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 15px;
     }
     & .p-products__image {
@@ -620,7 +651,7 @@
         text-align: right;
       }
       & > img {
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 81px;
           height: 57.5px;
         }
@@ -636,8 +667,9 @@
         padding-right: 0;
       }
       @include mq(lg, max) {
-        width: 50%;
+        width: auto;
         right: -60px;
+        transform: translateY(-20px);
         left: auto;
         text-align: left;
       }
@@ -648,7 +680,7 @@
         line-height: 1.5;
         padding-right: 30px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         right: 75px;
         padding-right: 15px;
       }
@@ -687,7 +719,7 @@
 
   &__info {
     font-size: 1.4rem;
-    color: #000;
+    color: #333333;
     line-height: 1.5;
     border-bottom: 2px dotted #494949;
     padding-left: 17px;
@@ -696,16 +728,12 @@
     right: 0;
     transform: translateY(-50%);
     letter-spacing: 1.2px;
-    @include mq(xl, max) {
-    }
     @include mq(lg, max) {
-      font-size: 2.6rem;
-      letter-spacing: 2.6px;
     }
     @include mq(md, max) {
       font-size: 2.6rem;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding-left: 8.5px;
       letter-spacing: 1.3px;
       transform: translateY(-50%);

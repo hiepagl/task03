@@ -22,19 +22,28 @@
     top: 66px;
     left: -2px;
     pointer-events: all;
-    overflow-y: auto;
+    z-index: 1;
     @include mq(lg, max) {
+      overflow-y: auto;
       position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-color: #1f4242;
       height: 100%;
       padding-top: 120px;
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-100%);
+      transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
     }
     @include mq(md, max) {
       inset: 0;
+      padding-top: 80px;
     }
     @include mq(sm, max) {
-      padding-top: 60px;
+      padding-top: 80px;
     }
     & > ul > * ~ * {
       margin-top: 16px;
@@ -62,8 +71,12 @@
         }
       }
       @include mq(md, max) {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @include mq(sm, max) {
+        padding-left: 15px;
+        padding-right: 15px;
       }
       & > a {
         font-size: 1.6rem;
@@ -77,6 +90,9 @@
           border-bottom: 1px solid #3a5656;
           border-top: 1px solid #1d3636;
         }
+        @include mq(md, max) {
+          letter-spacing: 2px;
+        }
       }
       &:nth-child(even) {
         margin-top: 14px;
@@ -89,11 +105,9 @@
 
   &__menuMobile.is-active + &__nav {
     @include mq(lg, max) {
-      display: block;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 
@@ -107,9 +121,11 @@
       transition: none;
     }
     @include mq(md, max) {
-      width: 229px;
-      height: 194px;
-      transform: translateX(-180px);
+      width: 114.5px;
+      height: 97px;
+      transform: translateX(-90px);
+      top: -22px;
+      transition: none;
     }
     @include mq(sm, max) {
       width: 114.5px;
@@ -117,21 +133,6 @@
       transform: translateX(-90px);
       top: -22px;
       transition: none;
-    }
-  }
-  &__menuMobile.is-active ~ &__leaf1 {
-    @include mq(lg, max) {
-      position: fixed;
-      top: -80px;
-      left: -80px;
-      transform: rotate(-105deg);
-      transition: all;
-      opacity: 0.2;
-    }
-    @include mq(md, max) {
-      opacity: 0.2;
-      width: 229px;
-      height: 194px;
     }
   }
 
@@ -147,9 +148,12 @@
       transition: none;
     }
     @include mq(md, max) {
-      top: 1000px;
-      width: 211px;
-      height: 214px;
+      top: 500px;
+      width: 105.5px;
+      height: 107px;
+      bottom: -10px;
+      right: -10px;
+      transition: none;
     }
     @include mq(sm, max) {
       top: 500px;
@@ -160,28 +164,16 @@
       transition: none;
     }
   }
-  &__menuMobile.is-active ~ &__leaf2 {
-    @include mq(lg, max) {
-      position: fixed;
-      bottom: unset;
-      right: -60px;
-      top: 600px;
-      transform: rotate(-27deg);
-      transition: all;
-      opacity: 0.2;
-    }
-    @include mq(md, max) {
-      opacity: 0.2;
-      width: 229px;
-      height: 194px;
-    }
-  }
 
   &.is-active &__container {
     .c-header__leaf1 {
       transform: translate(-273px, -50px);
       @include mq(md, max) {
-        transform: translate(-180px, -50px);
+        width: 114.5px;
+        height: 97px;
+        transform: translateX(-90px);
+        top: -22px;
+        transition: none;
       }
       @include mq(sm, max) {
         width: 114.5px;
@@ -193,21 +185,41 @@
     }
     .c-header__menuMobile.is-active ~ .c-header__leaf1 {
       @include mq(lg, max) {
-        position: absolute;
+        position: fixed;
         top: -80px;
         left: -80px;
         transform: rotate(-105deg);
         transition: all;
         opacity: 0.2;
+        z-index: 1;
       }
       @include mq(md, max) {
+        position: fixed;
         opacity: 0.2;
-        width: 229px;
-        height: 194px;
+        top: -60px;
+        left: -80px;
+        width: 232px;
+        height: 193px;
+      }
+      @include mq(sm, max) {
+        opacity: 0.2;
+        top: -60px;
+        left: -80px;
+        width: 232px;
+        height: 193px;
       }
     }
     .c-header__leaf2 {
       transform: translateX(50px);
+      @include mq(md, max) {
+        top: 500px;
+        width: 105.5px;
+        height: 107px;
+        bottom: -10px;
+        right: -10px;
+        transform: translateX(0);
+        transition: none;
+      }
       @include mq(sm, max) {
         top: 500px;
         width: 105.5px;
@@ -220,21 +232,25 @@
     }
     .c-header__menuMobile.is-active ~ .c-header__leaf2 {
       @include mq(lg, max) {
-        position: absolute;
+        position: fixed;
         bottom: unset;
         right: -60px;
         top: 600px;
         transform: rotate(-27deg);
-        transition: all;
+        transition: none;
         opacity: 0.2;
+        z-index: 1;
       }
-
       @include mq(md, max) {
+        position: fixed;
+        bottom: unset;
+        top: 440px;
+        right: -70px;
+        transform: rotate(-27deg);
+        transition: none;
         opacity: 0.2;
-        right: -60px;
-        top: 410px;
-        width: 229px;
-        height: 194px;
+        width: 263px;
+        height: 182px;
       }
     }
 
@@ -248,33 +264,52 @@
 
   &__menuMobile.is-active ~ &__leaf1 {
     @include mq(lg, max) {
-      position: absolute;
+      position: fixed;
       top: -80px;
       left: -80px;
       transform: rotate(-105deg);
       transition: all;
       opacity: 0.2;
+      z-index: 1;
+    }
+    @include mq(md, max) {
+      position: fixed;
+      opacity: 0.2;
+      top: -60px;
+      left: -80px;
+      width: 232px;
+      height: 193px;
+    }
+    @include mq(sm, max) {
+      opacity: 0.2;
+      top: -60px;
+      left: -80px;
+      width: 232px;
+      height: 193px;
     }
   }
 
   &__menuMobile.is-active ~ &__leaf2 {
     @include mq(lg, max) {
-      position: absolute;
+      position: fixed;
       bottom: unset;
       right: -60px;
       top: 600px;
       transform: rotate(-27deg);
-      transition: all;
+      transition: none;
       opacity: 0.2;
+      z-index: 1;
     }
     @include mq(md, max) {
-      position: absolute;
+      position: fixed;
       bottom: unset;
-      right: -60px;
-      top: 410px;
+      top: 440px;
+      right: -70px;
       transform: rotate(-27deg);
-      transition: all;
+      transition: none;
       opacity: 0.2;
+      width: 263px;
+      height: 182px;
     }
   }
 
@@ -289,12 +324,20 @@
     @include mq(lg, max) {
       display: block;
     }
+    @include mq(md, max) {
+      top: 15px;
+      left: 15px;
+    }
     @include mq(sm, max) {
       top: 15px;
       left: 15px;
     }
     & > img {
       display: none;
+      @include mq(md, max) {
+        width: 45px;
+        height: 45px;
+      }
       @include mq(sm, max) {
         width: 45px;
         height: 45px;

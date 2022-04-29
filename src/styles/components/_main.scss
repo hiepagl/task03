@@ -1,7 +1,7 @@
 .l-wrapper {
   border: 30px solid transparent;
   border-image: url(../images/bg-header.jpg) 30 round;
-  @include mq(sm, max) {
+  @include mq(md, max) {
     border: 15px solid transparent;
     border-image: url(../images/bg-header.jpg) 15 round;
   }

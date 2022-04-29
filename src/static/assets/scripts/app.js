@@ -2,11 +2,12 @@ let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
 let header = $(".c-header");
 let menuMobile = $("#menuMobile");
-let introContents = $$(".p-intro__content > .p-intro__info");
+let introContents = $$(".p-intro__content > a");
 let showInfos = $$(".p-intro__showInfo");
 let pointList1 = $$(".p-point__list1 > .p-point__wrapItem");
 let pointList2 = $$(".p-point__list2 > .p-point__wrapItem");
 let pointList3 = $$(".p-point__list3 > .p-point__wrapItem");
+let navBarList = $$(".c-header__nav > ul > li > a");
 let pointList1Btn = $$(
   ".p-point__list1 > .p-point__wrapItem > .p-point__Item > .p-point__btnMore"
 );
@@ -74,5 +75,11 @@ for (let i = 0; i < pointList1.length; i++) {
   pointList3Btn[i].onclick = function () {
     clearPointList3();
     pointList3[i].classList.add("active");
+  };
+}
+
+for (let i = 0; i < navBarList.length; i++) {
+  navBarList[i].onclick = function () {
+    menuMobile.classList.remove("is-active");
   };
 }

@@ -2,9 +2,6 @@
   padding-top: 105px;
   padding-bottom: 16px;
   @include mq(md, max) {
-    padding-top: 80px;
-  }
-  @include mq(sm, max) {
     padding-top: 40px;
     padding-bottom: 8px;
   }
@@ -12,8 +9,9 @@
     max-width: 1090px;
     margin: auto;
     padding: 0 30px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 0 15px;
+      max-width: 345px;
     }
   }
 
@@ -37,7 +35,7 @@
       background-size: contain;
       border-radius: 50px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       height: 250px;
       max-width: 250px;
       border-radius: 25px;
@@ -48,7 +46,7 @@
         top: 0;
         transform: translateY(84px);
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         transform: translateY(42px);
       }
     }
@@ -72,7 +70,7 @@
       background-size: contain;
       border-radius: 50px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       height: 250px;
       max-width: 250px;
       border-radius: 25px;
@@ -89,7 +87,7 @@
         max-width: 100%;
         transform: translateX(-50%);
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 205.5px;
       }
       & > img:nth-child(1) {
@@ -126,7 +124,7 @@
         margin-right: 0;
         letter-spacing: 2.8px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         line-height: 30px;
         letter-spacing: 1.4px;
       }
@@ -143,7 +141,7 @@
         line-height: 1.5;
         letter-spacing: 4px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 2px;
       }
     }

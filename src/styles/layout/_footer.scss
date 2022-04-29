@@ -2,7 +2,7 @@
   text-align: center;
   padding-top: 90px;
   padding-bottom: 61px;
-  @include mq(sm, max) {
+  @include mq(md, max) {
     padding-top: 48.5px;
     padding-bottom: 32.5px;
   }
@@ -12,8 +12,9 @@
     padding: 0 20px;
     @include mq(md, max) {
       padding: 0 30px;
+      max-width: 345px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 0 15px;
     }
   }
@@ -49,11 +50,11 @@
       text-align: center;
       margin-top: 50px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       text-align: center;
       margin-top: 25px;
     }
-    & > figure {
+    & > a > figure {
       margin-top: 13px;
       @include mq(md, max) {
         margin-top: 0;
@@ -63,7 +64,7 @@
           width: 200px;
           height: 51px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 100px;
           height: 25.5px;
         }
@@ -83,7 +84,7 @@
         padding-top: 0;
         margin-top: 30px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 1px;
         margin-top: 15px;
       }

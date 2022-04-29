@@ -76,9 +76,7 @@ img {
   img {
     max-width: 100%;
   }
-  html {
-    font-size: 45%;
-  }
+
   h1,
   h2,
   h3,
@@ -101,12 +99,6 @@ img {
 }
 
 @include mq(md, max) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-@include mq(sm, max) {
   html {
     font-size: 31.25%;
   }

@@ -1,6 +1,6 @@
 .p-intro {
   margin-bottom: -6px;
-  @include mq(sm, max) {
+  @include mq(md, max) {
     margin-bottom: -3px;
   }
   &__container {
@@ -8,10 +8,8 @@
     margin: auto;
     padding: 0 20px;
     @include mq(md, max) {
-      padding: 0 30px;
-    }
-    @include mq(sm, max) {
       padding: 0 15px;
+      max-width: 345px;
     }
   }
 
@@ -22,16 +20,17 @@
     @include mq(md, max) {
       padding-bottom: 0;
       border-bottom: none;
+      pointer-events: none;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 17.5px;
       padding-bottom: 15.5px;
     }
-    & .p-intro__heading {
+    & > a > .p-intro__heading {
       display: flex;
     }
 
-    & > .p-intro__info {
+    & > a > .p-intro__info {
       position: relative;
       margin-top: 20px;
       padding-right: 43px;
@@ -44,37 +43,20 @@
         line-height: 1.7;
         font-size: 2.6rem;
         letter-spacing: 2.6px;
-        height: 0;
+        height: auto;
+        max-height: 0;
         overflow-y: hidden;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         margin-top: 10px;
         letter-spacing: 1.3px;
       }
-      &.is-show {
-        @include mq(md, max) {
-          height: auto;
-        }
 
-        & + .p-intro__showInfo > figure:first-child {
-          @include mq(md, max) {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-          }
-        }
-        & + .p-intro__showInfo > figure:last-child {
-          @include mq(md, max) {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-          }
-        }
-      }
       & > figure {
         position: absolute;
         right: 0;
@@ -84,8 +66,9 @@
           display: none;
         }
       }
-      & > a {
+      & > p {
         display: none;
+        cursor: pointer;
         @include mq(md, max) {
           display: block;
           font-family: Kozuka Gothic Pr6N;
@@ -101,7 +84,7 @@
           margin-top: 35px;
           margin-bottom: 40px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           letter-spacing: 1.3px;
           border-bottom: 1px solid #176b6a;
           margin-top: 17.5px;
@@ -109,10 +92,38 @@
         }
       }
     }
+
+    & > .is-show {
+      & > .p-intro__info {
+        @include mq(md, max) {
+          max-height: 400px;
+        }
+      }
+
+      & + .p-intro__showInfo > figure:first-child {
+        @include mq(md, max) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+        }
+      }
+      & + .p-intro__showInfo > figure:last-child {
+        @include mq(md, max) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: none;
+        }
+      }
+    }
   }
 
   &__showInfo {
     display: none;
+    pointer-events: all;
     @include mq(md, max) {
       position: relative;
       display: block;
@@ -121,7 +132,7 @@
       border-radius: 15px;
       margin-top: 20px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       height: 20px;
       border-radius: 7.5px;
       margin-top: 10px;
@@ -143,7 +154,7 @@
     }
 
     & > figure > img {
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 35px;
         height: 15px;
       }
@@ -156,7 +167,7 @@
       padding-top: 0;
       padding-right: 20px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding-right: 10px;
     }
     & > span {
@@ -169,7 +180,7 @@
         line-height: 2;
         letter-spacing: 2.2px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 1.1px;
       }
     }
@@ -183,7 +194,7 @@
         line-height: 1.7;
         letter-spacing: 3px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 1.5px;
       }
     }
@@ -209,7 +220,7 @@
         margin-top: 15px;
         border-radius: 0;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         min-width: 79.5px;
         width: 79.5px;
         margin-right: 10px;
@@ -226,7 +237,7 @@
           width: 159px;
           height: 65px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 79.5px;
           height: 32.5px;
         }

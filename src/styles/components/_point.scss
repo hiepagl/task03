@@ -8,15 +8,16 @@
     max-width: 1140px;
     margin: auto;
     padding: 0 20px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 0 10px;
+      max-width: 345px;
     }
   }
 
   &__wrapper {
     padding-top: 100px;
     padding-bottom: 110px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding-top: 50px;
       padding-bottom: 55px;
     }
@@ -34,7 +35,7 @@
         color: #000;
         padding: 0 10px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         margin-top: 25px;
         letter-spacing: 1.3px;
         padding: 0 5px;
@@ -47,7 +48,7 @@
     margin: auto;
     margin-bottom: 107px;
     padding: 0 10px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-bottom: 53.5px;
       padding: 0 5px;
     }
@@ -65,7 +66,7 @@
 
   &__number {
     margin-right: 28px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-right: 14px;
     }
     & > figure {
@@ -78,7 +79,7 @@
           width: 85px;
           height: 61px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 42.5px;
           height: 30.5px;
         }
@@ -95,7 +96,7 @@
         @include mq(md, max) {
           width: 70px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 35px;
           height: 1px;
           bottom: -10px;
@@ -113,7 +114,7 @@
     @include mq(md, max) {
       font-size: 3.2rem;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 16px;
     }
   }
@@ -135,7 +136,7 @@
         font-size: 4rem;
         letter-spacing: 4px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 2px;
         margin-top: 1.5px;
         margin-bottom: 11px;
@@ -151,7 +152,7 @@
       @include mq(md, max) {
         display: none;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         margin-left: 1.5px;
         letter-spacing: 0.7px;
       }
@@ -164,7 +165,7 @@
         margin-top: 30px;
         margin-bottom: 35px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         margin-top: 15px;
         margin-bottom: 17.5px;
       }
@@ -175,7 +176,7 @@
           letter-spacing: 2.6px;
           margin-left: 0;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           letter-spacing: 1.3px;
         }
       }
@@ -191,7 +192,7 @@
       margin-top: 0;
       margin: -15px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin: -7.5px;
     }
   }
@@ -209,7 +210,7 @@
       padding: 15px;
     }
 
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 7.5px;
     }
   }
@@ -222,7 +223,7 @@
     height: 100%;
     position: relative;
     border-radius: 30px;
-    @include mq(sm, max) {
+    @include mq(md, max) {
       border-radius: 15px;
     }
   }
@@ -244,10 +245,13 @@
     text-align: center;
     padding: 0 45px;
     z-index: 1;
-    cursor: pointer;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
     @include mq(xl, max) {
       padding: 0 25px;
     }
@@ -258,7 +262,7 @@
       left: 30px;
       padding: 0 40px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       top: 15px;
       right: 15px;
       bottom: 15px;
@@ -278,7 +282,7 @@
         font-size: 3.2rem;
         margin-bottom: 100px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 1px;
         margin-bottom: 50px;
       }
@@ -295,7 +299,7 @@
           width: 100px;
           bottom: -50px;
         }
-        @include mq(sm, max) {
+        @include mq(md, max) {
           width: 50px;
           bottom: -25px;
         }
@@ -312,28 +316,38 @@
         font-size: 2.6rem;
         letter-spacing: 2.6px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 1.3px;
       }
     }
+  }
+
+  &__wrapItem.active &__Item &__info {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
   }
 
   &__label {
     max-width: 100%;
     position: relative;
     margin-top: 30px;
+    cursor: pointer;
     @include mq(md, max) {
       margin-top: 40px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin-top: 20px;
+    }
+    &:hover {
+      opacity: 0.7;
     }
     & > figure {
       height: 40px;
       @include mq(md, max) {
         height: 53px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         height: 26.5px;
       }
     }
@@ -342,7 +356,7 @@
         width: 263px;
         height: 53px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 131.5px;
         height: 26.5px;
       }
@@ -362,7 +376,7 @@
       @include mq(md, max) {
         font-size: 2.6rem;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         letter-spacing: 0.75px;
       }
     }
@@ -378,7 +392,7 @@
       right: 30px;
       bottom: 30px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       right: 15px;
       bottom: 15px;
     }
@@ -387,7 +401,7 @@
         width: 124px;
         height: 133px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 62px;
         height: 66.5px;
       }
@@ -397,17 +411,13 @@
     }
   }
 
-  &__wrapItem.active &__Item &__info {
-    display: flex;
-  }
-
   &__partner {
     width: 100%;
     padding-top: 7px;
     @include mq(md, max) {
       padding: 0 10px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding-top: 3.5px;
       padding: 0 5px;
     }
@@ -418,12 +428,17 @@
       line-height: 1;
       margin-bottom: 48px;
       letter-spacing: 3px;
+
+      @include mq(lg, max) {
+        line-height: 1.2;
+      }
+
       @include mq(md, max) {
         font-size: 3.6rem;
         line-height: 1.7;
         letter-spacing: 3.2px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         margin-bottom: 24px;
         letter-spacing: 1.6px;
       }
@@ -437,7 +452,7 @@
       margin: -25px;
       padding: 0 30px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       margin: -12.5px;
       padding: 0 15px;
     }
@@ -449,7 +464,7 @@
       width: 50%;
       padding: 25px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       padding: 12.5px;
     }
     &:nth-child(1) > .p-point__partnerItem > .p-point__partnerLogo > img {
@@ -459,7 +474,7 @@
       @include mq(md, max) {
         width: 105px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 52.5px;
       }
     }
@@ -470,7 +485,7 @@
       @include mq(md, max) {
         width: 164px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 82px;
       }
     }
@@ -481,7 +496,7 @@
       @include mq(md, max) {
         width: 159px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 79.5px;
       }
     }
@@ -492,7 +507,7 @@
       @include mq(md, max) {
         width: 200px;
       }
-      @include mq(sm, max) {
+      @include mq(md, max) {
         width: 100px;
       }
     }
@@ -505,7 +520,7 @@
     @include mq(md, max) {
       height: 90px;
     }
-    @include mq(sm, max) {
+    @include mq(md, max) {
       height: 45px;
       border-radius: 10px;
     }
@@ -530,7 +545,7 @@
       right: 15px;
     }
 
-    @include mq(sm, max) {
+    @include mq(md, max) {
       width: 5px;
       height: 12.5px;
       right: 7.5px;
